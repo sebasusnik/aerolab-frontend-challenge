@@ -30,7 +30,7 @@ const Home: NextPage = () => {
             <div>MAIN CTA</div>
           </div>
           <div className="main-illustration-wrapper">
-            <Image src={heroImage} layout="fill" objectFit="scale-down" quality={80} />
+            <Image src={heroImage} layout="fill" objectFit="scale-down" quality={100} />
           </div>
         </div>
 
