@@ -19,10 +19,10 @@
 
   /* =========== SPACING =========== */
 
-  --page-width: clamp(70em, 80vw + 3em, 94em);
+  --page-width: clamp(64em, 80vw + 3em, 94em); /* smoothly from 1024px to 1504px */
   --gap: 5em, 1.5em;
   --topbar-size: 8em;
-
+ 
   /* =========== TYPOGRAPHY =========== */
 
   /* font-sizes */

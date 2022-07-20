@@ -1,21 +1,37 @@
 .main{
   width:100%;
-  height: 37.5em;
-  align-items: start;
   padding-top: 6.5em;
+  gap: 3em;
   & .main-content {
-    display: inline-block;
     flex-direction: column;
+    gap: 1em;
     width: 37.5em;
-    margin-right: auto;
-  }
-  & .main-illustration-wrapper {
-    display: inline-block;
-    position: relative;
     height: clamp(25.5em, 28vw + 4em, 37.5em);
+    & .main-heading {
+      flex-direction: column;
+      & .main-title {
+        margin-top: -1.5rem;
+      }
+      
+    }
+    & p {
+      font-size: clamp( 0.85em, 1.1vw + 0.01em, 1em);
+      max-width: 30em;
+    }
+    & .main-cta {
+      font-size: clamp(0.8em, 1vw + 0.01em,1em);
+      width: 19.9em;
+      height: 5em;
+      margin: auto 0;
+      border-radius: 1.5em;
+    }
+  }
+  & .main-illustration {
+    position: relative;
+    height: clamp(25.5em, 28vw + 4em, 37.5em); /* this line scales the entire container dynamically */
     aspect-ratio: 722 / 600;
     background: var(--clr-section-bg);
-    border-radius: 6.5em;
+    border-radius: clamp(4.42em, 5vw + 1em, 6.5em); /* mantain the border radius while scaling */
     box-shadow: 0px 0.25em 1em rgba(0, 0, 0, 0.12);
     & span {
       overflow: visible !important; /* overwrites next/image component styles for this case */
