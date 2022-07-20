@@ -1,0 +1,252 @@
+/* ============================================ */
+/* UTILITY CLASSES                              */
+/* ============================================ */
+
+/* =========== GENERAL =========== */
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.center{
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap);
+}
+
+.stretch {
+  justify-content: stretch;
+}
+
+.container {
+  padding-inline: 1.25em;
+  max-width: var(--page-width) ;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.sr-only {
+position: absolute; 
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px; 
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+white-space: nowrap; /* added line */
+border: 0;
+z-index: 100;
+}
+
+.skip-to-content {
+  position: absolute;
+  top: 0;  
+  z-index: 9999;
+  background: var(--clr-neutrals-0);
+  color: hsl( var(--clr-neutrals-900) ); 
+  padding: .5em 1em;
+  margin-inline: auto;
+  transform: translateY(-100%);
+  transition: transform 250ms ease-in;
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
+
+
+/* =========== TYPOGRAPHY =========== */
+
+.tittle-lg {
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-900);
+  font-weight: 900;
+  line-height: 80%;
+}
+
+.tittle-md {
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-700);
+  font-weight: 900;
+  line-height: 80%;
+  @media (min-width: 600px) {
+    font-size: var(--fs-800);
+  }
+}
+
+.tittle-sm {
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-600);
+  font-weight: 900;
+  line-height: 100%;
+  @media (min-width: 600px) {
+    font-size: var(--fs-700);
+  }
+}
+
+.text-lg {
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-400);
+  font-weight: 600;
+  line-height: 150%;
+  &.light {
+    font-weight: 500;
+  }
+  &.allcaps {
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+  }
+  @media (min-width: 600px) {
+    font-size: var(--fs-500);
+  }
+}
+
+.text-md {
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-200);
+  font-weight: 600;
+  line-height: 150%;
+  &.allcaps {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  @media (min-width: 600px) {
+    font-size: var(--fs-300);
+  }
+}
+
+/* =========== TEXT COLOR =========== */
+
+.primary {
+  color: var(--clr-neutrals-900);
+}
+
+.secondary {
+  color: var(--clr-neutrals-600);
+}
+
+.accent {
+  color: var(--clr-neutrals-0);
+}
+
+.clr-100 {
+  color: var(--clr-neutrals-100)
+}
+
+.brand {
+  background: var(--clr-brand-default);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+/* =========== BACKGROUND COLORS =========== */
+
+.bg-blured {
+  background-color: var(--clr-blur);
+  backdrop-filter: var(--blur);
+  }
+
+.bg-spacial {
+  background: var(--clr-illustration-bg);
+  box-shadow: var(--shadow-special);
+  border-radius: 104px;
+}
+
+.bg-100 { 
+  background: var(--clr-neutrals-100)
+}
+
+.bg-200 { 
+  background: var(--clr-neutrals-200)
+}
+
+.bg-300 { 
+  background: var(--clr-neutrals-300)
+}
+
+.bg-500 { 
+  background: var(--clr-neutrals-500)
+}
+.bg-600 { 
+  background: var(--clr-neutrals-600)
+}
+
+.bg-900 { 
+  background: var(--clr-neutrals-900)
+}
+
+
+/* =========== ELEVATION =========== */
+
+.shadow {
+  box-shadow: var(--shadow);
+}
+
+.elevation {
+  filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.05));
+}
+
+
+/* =========== DEFAULT ELEMENTS =========== */
+
+.icon-sm {
+  height: 1.25em;
+  width: 1.25em;
+  @media (min-width: 600px) {
+    height: 1.5em;
+    width: 1.5em;
+  }
+}
+
+.icon-lg {
+  height: 1.5em;
+  width: 1.5em;
+  @media (min-width: 600px) {
+    height: 2em;
+    width: 2em;
+  }
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+  height: 1em;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  border: var(--clr-brand-default);
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: var(--clr-brand-default) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

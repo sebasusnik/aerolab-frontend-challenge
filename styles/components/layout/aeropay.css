@@ -1,0 +1,89 @@
+.aeropay-wrapper {
+  bottom: -0.25em;
+  right: 0;
+  position: absolute;
+  @media (min-width: 600px) {
+    bottom: -0.5em;
+  }
+}
+.aeropay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999999;
+  width: 17.5em;
+  border: 1px solid var(--clr-neutrals-300);
+  background-color: var(--clr-neutrals-0);  border: ;
+  border-radius: 1em;
+  box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.08);
+  transition: top 0.45s ease-out;
+  &.top{
+    top: 2.75em;
+    @media (min-width: 600px) {
+      top: 2.5em;
+    }
+  }
+  @media (min-width: 600px) {
+    width: 19.5em;
+    top: 0;
+  }
+  /* remove autofocus outline on mobile */
+  @media (hover: none){
+    &:focus {
+      outline: none
+    }
+  }
+  & .aeropay-header {
+    align-items: center;
+    padding: 0.85em 1.25em;
+    border-bottom: 1px solid var(--clr-neutrals-300);
+    @media (min-width: 600px){
+      padding: 1em 1.5em;
+    }
+  }
+  & .aeropay-content {
+    padding: 1.25em;
+    flex-direction: column;
+    gap: 2.5em;
+    @media (min-width: 600px) {
+      padding: 1.5em;
+    }
+    & .aerocard {
+      flex-direction: column;
+      padding: 1em;
+      border-radius: 0.5em;
+      height: 8.5em;
+      @media (min-width: 600px){
+        height: 9.25em;
+      }
+    }
+    & .card-waves {
+      position: absolute;
+      width: 14.875em;
+      height: 8.5em;
+      @media (min-width: 600px) {
+        width: 16.375em;
+        height: 9.25em;
+      }
+    }
+    & .aeropay-amount-cta {
+      flex-direction: column;
+      gap: 1.5em;
+      & .aeropay-amount {
+        gap: 0.25em;
+      }
+    }
+  }
+}
+
+.number-selector {
+  background-color: var(--clr-brand-light);
+  justify-content: center;
+  align-items: center;
+  padding: 0.25em;
+  width: 100%;
+  border-radius: 0.75em;
+  &.active {
+    background: var(--clr-brand-default)
+  }
+}

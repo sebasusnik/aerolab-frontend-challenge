@@ -1,0 +1,59 @@
+.aerocoin-wrapper {
+  position: relative;
+}
+.aerocoin {
+  align-items: center;
+  padding: 0.5em 1em;
+  gap: 1em;
+  min-width: 8.9375em;
+  border-radius: 1em;
+  border: 1px solid var(--clr-neutrals-300);
+  background-color: var(--clr-neutrals-0);
+  cursor: pointer;
+  @media (hover: hover){   /* deals with hover on devices with no hover support */
+    &:hover {
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+    }
+  }
+  &.active {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  @media (min-width: 600px) {
+    min-width: 10.5em;
+  }
+  & .aerocoin-content {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
+    @media (min-width: 600px) {
+      min-width: 6.25em;
+    }
+  }
+  & .aerocoin-chevron {
+    transform: rotate(0.25turn);
+    transition: transform 0.3s;
+    &.active {
+      transform: rotate(0.75turn);
+    }
+  }
+}
+
+.aerocoin-loader {
+  min-width: 2.26em;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 0.3em;
+  @media (min-width: 600px) {
+    justify-content: flex-end;
+    min-width: 3.08em;
+  }
+  & .spinner {
+    height: 1.5em;
+    width: 1.5em;
+    @media (min-width: 600px) {
+      height: 2em;
+      width: 2em;
+      padding: 2%;
+    }
+  }
+}

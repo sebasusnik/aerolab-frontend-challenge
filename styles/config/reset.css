@@ -1,0 +1,105 @@
+/* ============================================ */
+/* RESET                                        */
+/* ============================================ */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+/* Reset the font sizes */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+    font-size: 1em;
+}
+
+/* set up the body */
+body {
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-400);
+    color: hsl( var(--clr-neutrals-900) );
+    background-color: var(--clr-neutrals-0);
+    line-height: 1.5;
+    min-height: 100vh;
+    
+    overflow-x: hidden;
+}
+
+/* occult the scrollbar */
+body::-webkit-scrollbar {
+  display:none;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* remove focus outline to the article when skip to content */
+#products:focus {
+    outline: none;
+}
+
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

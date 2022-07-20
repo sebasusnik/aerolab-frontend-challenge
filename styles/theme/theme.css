@@ -1,0 +1,34 @@
+  /* ------------------ */
+  /* DARK THEME         */
+  /* ------------------ */
+
+root: {
+  [data-theme='dark'] {
+    /* neutrals */
+    --clr-neutrals-0: hsla(215 24% 19%);
+    --clr-neutrals-100: hsla(216 14% 55%);
+    --clr-neutrals-200: hsla(215 27% 65%);
+    --clr-neutrals-300: hsla(215 48% 90%);
+    --clr-neutrals-500: hsla(215 52% 94%);
+    --clr-neutrals-600: hsla(216 100% 98%);
+    --clr-neutrals-900: hsla(0 0% 100%);
+
+    /* brand */
+    --clr-brand-default: linear-gradient(102.47deg, hsl(215, 84%, 51%) -5.34%, hsl(300, 100%, 75%) 106.58%);
+    --clr-brand-hover: linear-gradient(102.47deg, hsl(215, 82%, 47%) -5.34%, 	hsl(300, 82%, 71%) 106.58%);
+
+    /* greens */
+    --clr-green-default: hsl(147 100% 90%);
+    --clr-green-light: hsl(148 67% 48%);
+
+    /* reds */
+    --clr-red-default:hsl(9, 100%, 93%);
+    --clr-red-light:hsl(20, 70%, 59%);
+
+    /* specials */
+    --clr-illustration-bg:linear-gradient(102.47deg, #7296EB -5.34%, #EAC0E9 106.58%, #EAC0E9 106.58%);
+    --clr-section-bg:linear-gradient(102.47deg, rgba(23, 111, 235, 0.5) -5.34%, rgba(255, 128, 255, 0.5) 106.58%);
+    --clr-aerolab:linear-gradient(180deg, #FF8800 0%, #FF6600 100%);
+    --clr-card-transparent-bg: hsla(0, 0%, 100%, 0.7);
+    }
+}

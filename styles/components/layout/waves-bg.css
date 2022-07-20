@@ -1,0 +1,9 @@
+.waves-bg {
+  z-index: -1;
+  background-image: url('../../../public/waves-bg.svg');
+  width: 100vw;
+  height: 1334px;
+  overflow: auto;
+  position: absolute;
+  top: 201px;
+}

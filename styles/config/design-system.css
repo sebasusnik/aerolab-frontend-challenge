@@ -1,0 +1,74 @@
+/* =========== GOOGLE FONTS =========== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;900&display=swap');
+
+/* ============================================ */
+/* CUSTOM PROPERTIES                            */
+/* ============================================ */
+
+/* custom media querys */
+@custom-media --tablet (min-width: 600px);
+@custom-media --desktop (min-width: 1024px);
+
+:root {
+  /* smooth-scrolling */
+  scroll-behavior: smooth;
+
+  /* =========== SPACING =========== */
+  --shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-special: 0px 4px 16px rgba(0, 0, 0, 0.12);
+
+  /* =========== SPACING =========== */
+
+  --page-width: clamp(70em, 80vw + 3em, 94em);
+  --gap: 5em, 1.5em;
+  --topbar-size: 8em;
+
+  /* =========== TYPOGRAPHY =========== */
+
+  /* font-sizes */
+  --fs-900: clamp(6em, 8.5vw + 2.5em, 12.5em); /* smoothly from 96px to 200px */
+  --fs-800: 3em;    /* 48px */
+  --fs-700: 2em;    /* 32px */
+  --fs-600: 1.5em;  /* 24px */
+  --fs-500: 1.125em;/* 18px */
+  --fs-400: 1em;    /* 16px */
+  --fs-300: 0.875em;/* 14px */
+  --fs-200: 0.75em; /* 12px */
+  
+  /* font-families */
+  --ff-sans-normal: 'Montserrat', sans-serif;
+
+
+  /* =========== COLORS =========== */
+
+  /* neutrals */
+  --clr-neutrals-0: hsla(0 0% 100%);
+  --clr-neutrals-100: hsla(216 100% 98%);
+  --clr-neutrals-200: hsla(215 52% 94%);
+  --clr-neutrals-300: hsla(215 48% 90%);
+  --clr-neutrals-500: hsla(215 27% 65%);
+  --clr-neutrals-600: hsla(216 14% 55%);
+  --clr-neutrals-900: hsla(215 24% 19%);
+
+  /* brand */
+  --clr-brand-default: linear-gradient(102.47deg, hsl(215, 84%, 51%) -5.34%, hsl(300, 100%, 75%) 106.58%);
+  --clr-brand-hover: linear-gradient(102.47deg, #1667D9 -5.34%, #F279F2 106.58%);
+  --clr-brand-light: hsl(215 100% 95%);
+
+  /* greens */
+  --clr-green-default: hsl(148 67% 48%);
+  --clr-green-light: hsl(147 100% 90%);
+
+  /* reds */
+  --clr-red-default:hsl(20, 70%, 59%);
+  --clr-red-light:hsl(9, 100%, 93%);
+
+  /* specials */
+  --blur: blur(4px);
+  --clr-blur: hsla(0, 0%, 100%, 0.75);
+  --clr-illustration-bg:linear-gradient(102.47deg, #7296EB -5.34%, #EAC0E9 106.58%, #EAC0E9 106.58%);
+  --clr-section-bg:linear-gradient(102.47deg, rgba(23, 111, 235, 0.5) -5.34%, rgba(255, 128, 255, 0.5) 106.58%);
+  --clr-aerolab:linear-gradient(180deg, #FF8800 0%, #FF6600 100%);
+  --clr-processing:inear-gradient(102.47deg, rgba(23, 111, 235, 0.7) -5.34%, rgba(255, 128, 255, 0.7) 106.58%);
+  --clr-card-transparent-bg: hsla(0, 0%, 100%, 0.7);
+}

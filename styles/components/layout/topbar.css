@@ -1,0 +1,25 @@
+.topbar {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: all 0.45s ease-out;
+  @media (min-width: 600px) {
+    padding-inline: 1.25em;
+  }
+  & .container {
+    overflow: visible;
+    & .topbar-content {
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.75em 0;
+      height: var(--topbar-size);
+    }
+  }
+  &.occult{
+    top: calc(var(--topbar-size) * -1 );
+  }
+}
+.top-bar-spacer {
+  height: var(--topbar-size);
+}
