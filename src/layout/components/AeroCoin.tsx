@@ -18,7 +18,7 @@ const AeroCoin: React.FC<Props> = ({isOpen, points, closeAeroPay, handleClick, c
   const aeroCoinRef = useRef<HTMLButtonElement | null>(null);
   const pressed = usePressObserver({watchKey: 'Escape'});
 
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
+  const isDesktop = useMediaQuery('(min-width: 1080px)');
 
   const user = useUser();
   const status = useUserStatus();
@@ -32,12 +32,7 @@ const AeroCoin: React.FC<Props> = ({isOpen, points, closeAeroPay, handleClick, c
 
   if (user.id === '' || status === UserStatus.pending) {
     return (
-      <button
-        ref={aeroCoinRef}
-        type="button"
-        className={`aerocoin flex ${isOpen ? 'active' : ''}`}
-        onClick={handleClick}
-      >
+      <button ref={aeroCoinRef} type="button" className="aerocoin flex" onClick={handleClick}>
         <div className="aerocoin-content flex">
           <img className="icon-lg" aria-hidden="true" src="/icons/aeropay-1.svg" />
           <div className="aerocoin-loader flex">
@@ -47,7 +42,7 @@ const AeroCoin: React.FC<Props> = ({isOpen, points, closeAeroPay, handleClick, c
         <img
           aria-hidden="true"
           src="/icons/chevron-active.svg"
-          className={`aerocoin-chevron icon-sm ${isOpen ? 'active' : ''}`}
+          className="aerocoin-chevron icon-sm"
         />
       </button>
     );

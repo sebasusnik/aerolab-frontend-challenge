@@ -14,11 +14,11 @@ const Home: NextPage = () => {
       </Head>
 
       <section id="products" tabIndex={-1} className="container">
-        <div className="main flex">
-          <div className="main-content flex">
-            <h1 className="main-heading flex">
+        <div className="landing flex">
+          <div className="landing-content flex">
+            <h1 className="landing-heading flex">
               <span className="text-lg allcaps secondary">Explore the</span> <br />
-              <span className="main-title title-lg">
+              <span className="landing-title title-lg">
                 <span className="brand">TECH</span> <br />
                 <span>ZONE</span>
               </span>
@@ -27,11 +27,11 @@ const Home: NextPage = () => {
               Here you’ll be able to exchange all of your hard-earned Aeropoints and exchange them
               for cool tech.
             </p>
-            <button className="main-cta cta">
+            <button className="landing-cta cta">
               <span className="text-lg accent">VIEW ALL PRODUCTS</span>
             </button>
           </div>
-          <div className="main-illustration">
+          <div className="landing-illustration">
             {/*    image optimized    */}
             <Image src={heroImage} layout="fill" objectFit="scale-down" quality={100} />
           </div>
