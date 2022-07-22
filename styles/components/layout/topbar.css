@@ -21,5 +21,6 @@
   }
 }
 .top-bar-spacer {
-  height: var(--topbar-size);
+  height: clamp( 4.2em, 4vw + 3em , 8em);
+  background: transparent;
 }

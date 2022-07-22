@@ -5,32 +5,35 @@
   gap: 3em;
   & .landing-content {
     flex-direction: column;
-    gap: calc(3% + 0.2rem);;
     width: 37.5em;
-    height: clamp(25.5rem, 28vw + 4rem, 37.5rem);
+    height: clamp(25.5em, 28vw + 4.5em, 37.5em);
     & .landing-heading {
-      font-size: clamp(0.89em, 0.85vw + 0.02em,1em);
+      font-size: clamp(0.89em, 0.85vw + 0.02em, 1rem);
       flex-direction: column;
       & .landing-title {
         margin-top: calc(-4% + 0.1rem);
       }
     }
     & p {
-      font-size: clamp(0.89em, 0.85vw + 0.02em,1em);
+      font-size: clamp(0.89em, 0.85vw + 0.02em, 1em);
       max-width: 28.5em;
-      margin-bottom: 0.5em;
+      margin: calc(2.5% + 0.3rem) 0 1em;
     }
     & .landing-cta {
       font-size: clamp(0.8em, 0.85vw + 0.02em,1em);
       width: 19.9em;
       height: 5em;
+      gap: 1.5em;
       margin: auto 0;
       border-radius: 1.5em;
+      & .cta-arrow {
+        width: 1em;
+      }
     }
   }
   & .landing-illustration {
     position: relative;
-    height: clamp(25.5em, 28vw + 4em, 37.5em); /* this line scales the entire container dynamically */
+    height: clamp(25.5em, 28vw + 4.5em, 37.5em); /* this line scales the entire container dynamically */
     aspect-ratio: 722 / 600;
     background: var(--clr-section-bg);
     border-radius: clamp(4.42em, 5vw + 1em, 6.5em); /* mantain the border radius while scaling */

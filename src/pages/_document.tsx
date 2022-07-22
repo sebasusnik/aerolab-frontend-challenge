@@ -5,12 +5,6 @@ export default function Document() {
     <Html>
       <Head>
         {/* -- Primary Meta Tags -- */}
-        <title>Aerolab - DEVELOPER CHALLENGE</title>
-        <meta name="title" content="Aerolab - DEVELOPER CHALLENGE" />
-        <meta
-          name="description"
-          content="This is my resolution of the aerolab frontend developer challenge. If you like my work please contact me as /sebasusnik en linkedin or github."
-        />
 
         {/* -- Open Graph / Facebook -- */}
         <meta property="og:type" content="website" />

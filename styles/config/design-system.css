@@ -22,11 +22,11 @@
   --page-width: clamp(64em, 80vw + 3em, 94em); /* smoothly from 1024px to 1504px */
   --gap: 5em, 1.5em;
   --topbar-size: 8em;
- 
+
   /* =========== TYPOGRAPHY =========== */
 
   /* font-sizes */
-  --fs-900: clamp(6rem, 8.5vw + 2.5rem, 12.5rem); /* smoothly from 96px to 200px */
+  --fs-900: clamp(6em, 8.2vw + 2.8em, 12.5em); /* smoothly from 96px to 200px */
   --fs-800: 3em;    /* 48px */
   --fs-700: 2em;    /* 32px */
   --fs-600: 1.5em;  /* 24px */
