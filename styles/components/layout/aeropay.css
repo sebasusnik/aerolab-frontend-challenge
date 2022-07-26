@@ -48,6 +48,11 @@
     @media (min-width: 600px) {
       padding: 1.5em;
     }
+    @media (max-height: 380px) {
+      height: 80vh;
+      gap: 1em;
+      padding: 1em 1.5em;
+    }
     & .aerocard {
       flex-direction: column;
       padding: 1em;

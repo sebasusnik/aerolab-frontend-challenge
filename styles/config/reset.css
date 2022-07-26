@@ -21,7 +21,8 @@ h5,
 p,
 figure,
 picture {
-    margin: 0; 
+  color: var(--clr-neutrals-900);
+  margin: 0; 
 }
 
 /* Reset the font sizes */

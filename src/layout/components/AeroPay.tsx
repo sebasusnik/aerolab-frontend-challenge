@@ -16,7 +16,7 @@ const AeroPay: React.FC<Props> = ({closeAeroPay, addPoints}) => {
 
   const scrollDirection: ScrollDirection = useScrollDirection();
 
-  const aeroPayRef = useRef<HTMLButtonElement | null>(null);
+  const aeroPayRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (aeroPayRef.current?.focus) aeroPayRef.current?.focus();
@@ -24,7 +24,7 @@ const AeroPay: React.FC<Props> = ({closeAeroPay, addPoints}) => {
 
   return (
     <div className="aeropay-wrapper">
-      <button
+      <div
         ref={aeroPayRef}
         tabIndex={-1}
         className={`aeropay ${scrollDirection === ScrollDirection.down ? 'top' : ''}`}
@@ -70,7 +70,7 @@ const AeroPay: React.FC<Props> = ({closeAeroPay, addPoints}) => {
             </button>
           </div>
         </div>
-      </button>
+      </div>
     </div>
   );
 };

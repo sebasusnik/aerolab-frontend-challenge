@@ -26,7 +26,7 @@
   /* =========== TYPOGRAPHY =========== */
 
   /* font-sizes */
-  --fs-900: clamp(6em, 8.2vw + 2.8em, 12.5em); /* smoothly from 96px to 200px */
+  --fs-900: clamp(6em, 8vw + 3em, 12.5em); /* smoothly from 96px to 200px */
   --fs-800: 3em;    /* 48px */
   --fs-700: 2em;    /* 32px */
   --fs-600: 1.5em;  /* 24px */
