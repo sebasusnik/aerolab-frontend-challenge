@@ -13,6 +13,7 @@
     align-items: center;
     text-align: center;
     gap: 1.25em;
+    z-index: 80;
     @media (min-width: 1080px) {
       align-items: inherit;
       text-align: inherit;
