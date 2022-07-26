@@ -6,8 +6,7 @@
   @media (min-width: 1080px){
     flex-direction: row;
     align-items: inherit;
-    width:100%;
-    gap: 3em;
+    gap: 3.5em;
   }
   & .landing-content {
     flex-direction: column;
@@ -75,7 +74,7 @@
       objet-fit: cover !important;
     }
     @media (min-width: 1080px) {
-      width: 100%;
+      width: inherit;
       height: clamp(25.5em, 28vw + 4.5em, 37.5em); /* this line scales the entire container dynamically */
       aspect-ratio: 722 / 600;
       background: var(--clr-section-bg);
