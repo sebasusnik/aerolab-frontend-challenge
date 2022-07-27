@@ -32,7 +32,13 @@ const AeroCoin: React.FC<Props> = ({isOpen, points, closeAeroPay, handleClick, c
 
   if (user.id === '' || status === UserStatus.pending) {
     return (
-      <button ref={aeroCoinRef} type="button" className="aerocoin flex" onClick={handleClick}>
+      <button
+        ref={aeroCoinRef}
+        role="Open aeropay button"
+        type="button"
+        className="aerocoin flex"
+        onClick={handleClick}
+      >
         <div className="aerocoin-content flex">
           <img className="icon-lg" aria-hidden="true" src="/icons/aeropay-1.svg" />
           <div className="aerocoin-loader flex">

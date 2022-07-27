@@ -35,7 +35,7 @@ const Navbar: React.FC<Props> = ({closeAeroPay, handleClick, isOpen}) => {
               handleClick={handleClick}
               points={points}
             >
-              <AeroPay closeAeroPay={closeAeroPay} addPoints={addPoints} />
+              <AeroPay closeAeroPay={closeAeroPay} addPoints={addPoints} points={points} />
             </AeroCoin>
           </div>
         </div>
