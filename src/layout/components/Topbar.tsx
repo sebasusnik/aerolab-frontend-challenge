@@ -1,10 +1,14 @@
 import React from 'react';
 
+import dynamic from 'next/dynamic';
+
 import AeroCoin from './AeroCoin';
-import AeroPay from './AeroPay';
 import Logo from './Logo';
 import {ScrollDirection, useScrollDirection} from '~layout/hooks/useScrollDirection';
 import {usePoints} from '~user/hooks';
+const Aeropay = dynamic(() => import('./AeroPay'), {
+  ssr: false,
+});
 
 interface Props {
   closeAeroPay: () => void;
@@ -35,7 +39,7 @@ const Navbar: React.FC<Props> = ({closeAeroPay, handleClick, isOpen}) => {
               handleClick={handleClick}
               points={points}
             >
-              <AeroPay closeAeroPay={closeAeroPay} addPoints={addPoints} points={points} />
+              <Aeropay closeAeroPay={closeAeroPay} addPoints={addPoints} points={points} />
             </AeroCoin>
           </div>
         </div>

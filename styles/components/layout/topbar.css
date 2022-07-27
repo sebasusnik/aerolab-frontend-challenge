@@ -1,3 +1,6 @@
+header {
+  background: transparent;
+}
 .topbar {
   z-index: 99;
   position: fixed;
