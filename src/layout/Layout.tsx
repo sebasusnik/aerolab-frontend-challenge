@@ -20,14 +20,16 @@ const Layout: React.FC<Props> = ({children}) => {
 
   return (
     <>
-      <SkipToContent />
-      <Topbar handleClick={handleClick} isOpen={isOpen} closeAeroPay={closeAeropay} />
+      <header>
+        <SkipToContent />
+        <Topbar handleClick={handleClick} isOpen={isOpen} closeAeroPay={closeAeropay} />
+        <div className="waves-bg" />
+      </header>
       <main
         onClick={() => {
           !!isOpen && setIsOpen(false);
         }}
       >
-        <div className="waves-bg" />
         {children}
       </main>
     </>

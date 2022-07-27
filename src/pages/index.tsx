@@ -17,19 +17,19 @@ const Home: NextPage = () => {
         <link rel="icon" href="/icons/aerolab-logo-2.svg" />
       </Head>
 
-      <section id="products" tabIndex={-1} className="container">
+      <div id="products" tabIndex={-1} className="container">
         <div className="landing flex">
           <div className="landing-content flex">
-            <h1 className="landing-heading flex">
+            <h1 role="heading" aria-level={1} className="landing-heading flex">
               <span className="text-lg allcaps secondary">Explore the</span> <br />
               <span className="landing-title title-lg">
                 <span className="brand">TECH</span> <br />
                 <span>ZONE</span>
               </span>
             </h1>
-            <p className="text-lg secondary">
-              Here you’ll be able to exchange all of your hard-earned Aeropoints and exchange them
-              for cool tech.
+            <p role="heading" aria-level={2} className="text-lg secondary">
+              Here you&#8217;ll be able to exchange all of your hard-earned Aeropoints and exchange
+              them for cool tech.
             </p>
             <a href="#products" className="landing-cta cta">
               <span className="text-lg accent">VIEW ALL PRODUCTS</span>
@@ -38,10 +38,17 @@ const Home: NextPage = () => {
           </div>
           <div className="landing-illustration">
             {/*    image optimized    */}
-            <Image src={heroImage} layout="fill" objectFit="scale-down" quality={100} />
+            <Image
+              priority
+              src={heroImage}
+              layout="fill"
+              objectFit="scale-down"
+              quality={100}
+              alt="Futuristic guy playing with a VR"
+            />
           </div>
         </div>
-      </section>
+      </div>
 
       <footer style={styles.footer} />
     </>

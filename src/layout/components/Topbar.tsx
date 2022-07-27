@@ -19,7 +19,7 @@ const Navbar: React.FC<Props> = ({closeAeroPay, handleClick, isOpen}) => {
   const [points, addPoints] = usePoints();
 
   return (
-    <div className="topbar-wrapper">
+    <>
       <div
         className={`topbar ${scrollDirection === ScrollDirection.down ? 'occult' : ''} bg-blured`}
         onClick={() => {
@@ -41,7 +41,7 @@ const Navbar: React.FC<Props> = ({closeAeroPay, handleClick, isOpen}) => {
         </div>
       </div>
       <div className="top-bar-spacer" />
-    </div>
+    </>
   );
 };
 

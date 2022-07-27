@@ -1,5 +1,6 @@
 import type {AppProps} from 'next/app';
 import App, {AppContext} from 'next/app';
+import Head from 'next/head';
 
 import Layout from '../layout/Layout';
 import '~styles/globals.css';
@@ -7,11 +8,16 @@ import {Provider as UserProvider} from '~user/context';
 
 function MyApp({Component, pageProps}: AppProps) {
   return (
-    <UserProvider>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </UserProvider>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <UserProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </UserProvider>
+    </>
   );
 }
 
