@@ -48,6 +48,10 @@ body {
     overflow-x: hidden;
 }
 
+header {
+  background: transparent;
+}
+
 /* occult the scrollbar */
 ::-webkit-scrollbar{
   display: none;
