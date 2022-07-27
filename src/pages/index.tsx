@@ -33,7 +33,7 @@ const Home: NextPage = () => {
             </p>
             <a href="#products" className="landing-cta cta">
               <span className="text-lg accent">VIEW ALL PRODUCTS</span>
-              <img className="cta-arrow" src="/icons/down-arrow.svg" alt="" />
+              <img className="cta-arrow icon-lg" src="/icons/down-arrow.svg" alt="" />
             </a>
           </div>
           <div className="landing-illustration">
