@@ -48,11 +48,6 @@ body {
     overflow-x: hidden;
 }
 
-/* prevent flashing on load */
-header {
-  background: var(--clr-neutrals-0);
-}
-
 /* occult the scrollbar */
 ::-webkit-scrollbar{
   display: none;

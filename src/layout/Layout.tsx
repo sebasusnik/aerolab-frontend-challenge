@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
 
-import SkipToContent from './components/SkipToContent';
-import Topbar from './components/Topbar';
+import dynamic from 'next/dynamic';
+
+const Topbar = dynamic(() => import('./components/Topbar'), {
+  ssr: false,
+});
 
 interface Props {
   children: React.ReactNode;
@@ -21,7 +24,6 @@ const Layout: React.FC<Props> = ({children}) => {
   return (
     <>
       <header>
-        <SkipToContent />
         <Topbar handleClick={handleClick} isOpen={isOpen} closeAeroPay={closeAeropay} />
         <div className="waves-bg" />
       </header>

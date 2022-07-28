@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 
 import AeroCoin from './AeroCoin';
 import Logo from './Logo';
+import SkipToContent from './SkipToContent';
 import {ScrollDirection, useScrollDirection} from '~layout/hooks/useScrollDirection';
 import {usePoints} from '~user/hooks';
 const Aeropay = dynamic(() => import('./AeroPay'), {
@@ -31,6 +32,7 @@ const Navbar: React.FC<Props> = ({closeAeroPay, handleClick, isOpen}) => {
         }}
       >
         <div className="container">
+          <SkipToContent />
           <div className="topbar-content flex">
             <Logo />
             <AeroCoin
