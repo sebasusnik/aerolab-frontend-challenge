@@ -7,6 +7,13 @@ export default function Document() {
         {/* -- Primary Meta Tags -- */}
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        {/* -- Google Fonts -- */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link crossOrigin="true" rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;900&display=swap"
+          rel="stylesheet"
+        />
         {/* -- Open Graph / Facebook -- */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://aerolab-frontend-challenge-theta.vercel.app" />
