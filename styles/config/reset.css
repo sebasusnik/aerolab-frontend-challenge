@@ -48,8 +48,9 @@ body {
     overflow-x: hidden;
 }
 
+/* prevent flashing on load */
 header {
-  background: transparent;
+  background: var(--clr-neutrals-0);
 }
 
 /* occult the scrollbar */
