@@ -11,20 +11,9 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link crossOrigin="true" rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;900&display=block"
-        />
-        <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;900&display=block"
         />
-        <noscript>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;900&display=block"
-          />
-        </noscript>
         {/* -- Open Graph / Facebook -- */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://aerolab-frontend-challenge-theta.vercel.app" />
