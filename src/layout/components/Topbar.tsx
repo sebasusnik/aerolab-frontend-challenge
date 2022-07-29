@@ -2,15 +2,13 @@ import React from 'react';
 
 import dynamic from 'next/dynamic';
 
+import AeroCoin from './AeroCoin';
 import Logo from './Logo';
 import SkipToContent from './SkipToContent';
 import {ScrollDirection, useScrollDirection} from '~layout/hooks/useScrollDirection';
 import {usePoints} from '~user/hooks';
 const Aeropay = dynamic(() => import('./AeroPay'), {
   ssr: false,
-});
-const AeroCoin = dynamic(() => import('./AeroCoin'), {
-  ssr: true,
 });
 
 interface Props {
