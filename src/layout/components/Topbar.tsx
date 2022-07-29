@@ -7,10 +7,10 @@ import SkipToContent from './SkipToContent';
 import {ScrollDirection, useScrollDirection} from '~layout/hooks/useScrollDirection';
 import {usePoints} from '~user/hooks';
 const Aeropay = dynamic(() => import('./AeroPay'), {
-  ssr: true,
+  ssr: false,
 });
 const AeroCoin = dynamic(() => import('./AeroCoin'), {
-  ssr: false,
+  ssr: true,
 });
 
 interface Props {
