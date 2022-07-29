@@ -24,30 +24,27 @@ const Navbar: React.FC<Props> = ({closeAeroPay, handleClick, isOpen}) => {
   const [points, addPoints] = usePoints();
 
   return (
-    <>
-      <div
-        className={`topbar ${scrollDirection === ScrollDirection.down ? 'occult' : ''} bg-blured`}
-        onClick={() => {
-          !!isOpen && handleClick();
-        }}
-      >
-        <div className="container">
-          <SkipToContent />
-          <div className="topbar-content flex">
-            <Logo />
-            <AeroCoin
-              isOpen={isOpen}
-              closeAeroPay={closeAeroPay}
-              handleClick={handleClick}
-              points={points}
-            >
-              <Aeropay closeAeroPay={closeAeroPay} addPoints={addPoints} points={points} />
-            </AeroCoin>
-          </div>
+    <div
+      className={`topbar ${scrollDirection === ScrollDirection.down ? 'occult' : ''} bg-blured`}
+      onClick={() => {
+        !!isOpen && handleClick();
+      }}
+    >
+      <div className="container">
+        <SkipToContent />
+        <div className="topbar-content flex">
+          <Logo />
+          <AeroCoin
+            isOpen={isOpen}
+            closeAeroPay={closeAeroPay}
+            handleClick={handleClick}
+            points={points}
+          >
+            <Aeropay closeAeroPay={closeAeroPay} addPoints={addPoints} points={points} />
+          </AeroCoin>
         </div>
       </div>
-      <div className="top-bar-spacer" />
-    </>
+    </div>
   );
 };
 

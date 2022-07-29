@@ -25,6 +25,7 @@ const Layout: React.FC<Props> = ({children}) => {
     <>
       <header>
         <Topbar handleClick={handleClick} isOpen={isOpen} closeAeroPay={closeAeropay} />
+        <div className="top-bar-spacer" />
         <div className="waves-bg" />
       </header>
       <main
