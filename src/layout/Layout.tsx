@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import dynamic from 'next/dynamic';
 
 const Topbar = dynamic(() => import('./components/Topbar'), {
-  ssr: false,
+  ssr: true,
 });
 
 interface Props {
