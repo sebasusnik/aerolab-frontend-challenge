@@ -22,6 +22,9 @@
     @media (min-width: 67.5rem) {
       top: 2.5em;
     }
+    @media (max-height: 23.75em) and (orientation: landscape) {
+      top: 8.2em;
+    }
   }
   @media (min-width: 67.5rem) {
     width: 19.5em;
@@ -32,6 +35,10 @@
     &:focus {
       outline: none
     }
+  }
+  @media (max-height: 23.75em) and (orientation: landscape) {
+    position: fixed;
+    top: 0.25em;
   }
   & .aeropay-header {
     align-items: center;
