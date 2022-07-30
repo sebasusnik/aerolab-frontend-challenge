@@ -48,7 +48,7 @@
     @media (min-width: 67.5rem) {
       padding: 1.5em;
     }
-    @media (max-height: 67.5rem) {
+    @media (max-height: 23.75em) and (orientation: landscape) {
       height: 80vh;
       gap: 1em;
       padding: 1em 1.5em;
