@@ -1,10 +1,6 @@
 import React, {useState} from 'react';
 
-import dynamic from 'next/dynamic';
-
-const DynamicTopbar = dynamic(() => import('./components/Topbar'), {
-  ssr: false,
-});
+import Topbar from './components/Topbar';
 
 interface Props {
   children: React.ReactNode;
@@ -24,7 +20,7 @@ const Layout: React.FC<Props> = ({children}) => {
   return (
     <>
       <header>
-        <DynamicTopbar handleClick={handleClick} isOpen={isOpen} closeAeroPay={closeAeropay} />
+        <Topbar handleClick={handleClick} isOpen={isOpen} closeAeroPay={closeAeropay} />
         <div className="top-bar-spacer" />
         <div className="waves-bg" />
       </header>
