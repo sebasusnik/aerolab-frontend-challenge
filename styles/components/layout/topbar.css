@@ -4,6 +4,7 @@
   top: 0;
   width: 100%;
   transition: all 0.45s ease-out;
+  background-color: var(--clr-neutrals-0);
   @media (min-width: 600px) {
     padding-inline: 1.25em;
   }
