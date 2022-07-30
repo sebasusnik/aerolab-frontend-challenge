@@ -3,9 +3,10 @@ import React, {useEffect, useRef} from 'react';
 import Loader from './Loader';
 import {usePressObserver} from '~layout/hooks/useKeyPress';
 import useMediaQuery from '~layout/hooks/useMediaQuery';
+import {useUser, useUserStatus} from '~user/hooks';
+import {UserStatus} from '~user/types';
 
 interface Props {
-  loading: boolean;
   isOpen: boolean;
   points: number;
   closeAeroPay: () => void;
@@ -13,18 +14,14 @@ interface Props {
   children: React.ReactNode;
 }
 
-const AeroCoin: React.FC<Props> = ({
-  isOpen,
-  points,
-  closeAeroPay,
-  handleClick,
-  children,
-  loading,
-}) => {
+const AeroCoin: React.FC<Props> = ({isOpen, points, closeAeroPay, handleClick, children}) => {
   const aeroCoinRef = useRef<HTMLButtonElement | null>(null);
   const pressed = usePressObserver({watchKey: 'Escape'});
 
   const isDesktop = useMediaQuery('(min-width: 1080px)');
+
+  const user = useUser();
+  const status = useUserStatus();
 
   // This Effect closes Aeropay when press Escape
   useEffect(() => {
@@ -33,9 +30,15 @@ const AeroCoin: React.FC<Props> = ({
     if (aeroCoinRef.current?.focus) aeroCoinRef.current?.focus();
   }, [closeAeroPay, isOpen, pressed]);
 
-  if (loading) {
+  if (user.id === '' || status === UserStatus.pending) {
     return (
-      <button role="Open aeropay button" type="button" className="aerocoin flex">
+      <button
+        ref={aeroCoinRef}
+        role="Open aeropay button"
+        type="button"
+        className="aerocoin flex"
+        onClick={handleClick}
+      >
         <div className="aerocoin-content flex">
           <img className="icon-lg" aria-hidden="true" src="/icons/aeropay-1.svg" />
           <div className="aerocoin-loader flex">
