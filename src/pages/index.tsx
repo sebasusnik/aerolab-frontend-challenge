@@ -49,6 +49,7 @@ const Home: NextPage = () => {
             {/*    image optimized    */}
             <Image
               src={heroImage}
+              placeholder="blur"
               layout="fill"
               objectFit="scale-down"
               quality={100}
@@ -62,7 +63,14 @@ const Home: NextPage = () => {
         <div className="walkthrough-cards container flex">
           <article className="intro-card">
             <div className="intro-card-top">
-              <Image src={browseImage} layout="fill" objectFit="cover" quality={80} alt="" />
+              <Image
+                src={browseImage}
+                layout="fill"
+                objectFit="cover"
+                quality={80}
+                placeholder="blur"
+                alt=""
+              />
             </div>
             <div className="intro-card-bottom flex">
               <div className="intro-card-head flex">
@@ -78,7 +86,14 @@ const Home: NextPage = () => {
           </article>
           <article className="intro-card">
             <div className="intro-card-top">
-              <Image src={chooseImage} layout="fill" objectFit="cover" quality={80} alt="" />
+              <Image
+                src={chooseImage}
+                layout="fill"
+                objectFit="cover"
+                quality={80}
+                placeholder="blur"
+                alt=""
+              />
             </div>
             <div className="intro-card-bottom flex">
               <div className="intro-card-head flex">
@@ -94,7 +109,14 @@ const Home: NextPage = () => {
           </article>
           <article className="intro-card">
             <div className="intro-card-top">
-              <Image src={enjoyImage} layout="fill" objectFit="cover" quality={80} alt="" />
+              <Image
+                src={enjoyImage}
+                layout="fill"
+                objectFit="cover"
+                quality={80}
+                placeholder="blur"
+                alt=""
+              />
             </div>
             <div className="intro-card-bottom flex">
               <div className="intro-card-head flex">

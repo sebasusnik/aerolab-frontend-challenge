@@ -63,15 +63,15 @@
     justify-content: center;
     align-items: flex-start;
     padding: 1em 1.5em 1.5em;
-    gap: 0.75em;
+    gap: 1em;
 
     height: 9.625em;
     width: 31.75em;
 
-    background: #FFFFFF;
+    background: var(--clr-neutrals-0);
     /* Neutrals/300 */
 
-    border: 1px solid #DAE4F2;
+    border: 1px solid var(--clr-neutrals-300);
     border-top: none;
     border-radius: 0 0 1.5em 1.5em;
 
