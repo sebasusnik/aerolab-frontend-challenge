@@ -34,7 +34,13 @@ const Home: NextPage = () => {
               Here you&#8217;ll be able to exchange all of your hard-earned Aeropoints and exchange
               them for cool tech.
             </p>
-            <a href="#products" className="landing-cta cta">
+            <a
+              href="#products"
+              className="landing-cta cta"
+              onClick={e => {
+                e.stopPropagation();
+              }}
+            >
               <span className="text-lg accent">VIEW ALL PRODUCTS</span>
               <img className="cta-arrow icon-md" src="/icons/down-arrow.svg" alt="" />
             </a>
@@ -42,7 +48,6 @@ const Home: NextPage = () => {
           <div className="landing-illustration">
             {/*    image optimized    */}
             <Image
-              priority
               src={heroImage}
               layout="fill"
               objectFit="scale-down"
@@ -57,14 +62,7 @@ const Home: NextPage = () => {
         <div className="walkthrough-cards container flex">
           <article className="intro-card">
             <div className="intro-card-top">
-              <Image
-                priority
-                src={browseImage}
-                layout="fill"
-                objectFit="cover"
-                quality={100}
-                alt=""
-              />
+              <Image src={browseImage} layout="fill" objectFit="cover" quality={80} alt="" />
             </div>
             <div className="intro-card-bottom flex">
               <div className="intro-card-head flex">
@@ -80,14 +78,7 @@ const Home: NextPage = () => {
           </article>
           <article className="intro-card">
             <div className="intro-card-top">
-              <Image
-                priority
-                src={chooseImage}
-                layout="fill"
-                objectFit="cover"
-                quality={100}
-                alt=""
-              />
+              <Image src={chooseImage} layout="fill" objectFit="cover" quality={80} alt="" />
             </div>
             <div className="intro-card-bottom flex">
               <div className="intro-card-head flex">
@@ -103,14 +94,7 @@ const Home: NextPage = () => {
           </article>
           <article className="intro-card">
             <div className="intro-card-top">
-              <Image
-                priority
-                src={enjoyImage}
-                layout="fill"
-                objectFit="cover"
-                quality={100}
-                alt=""
-              />
+              <Image src={enjoyImage} layout="fill" objectFit="cover" quality={80} alt="" />
             </div>
             <div className="intro-card-bottom flex">
               <div className="intro-card-head flex">
