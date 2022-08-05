@@ -49,7 +49,6 @@ const Home: NextPage = () => {
             {/*    image optimized    */}
             <Image
               src={heroImage}
-              placeholder="blur"
               layout="fill"
               objectFit="scale-down"
               quality={100}
