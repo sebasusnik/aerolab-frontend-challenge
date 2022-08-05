@@ -1,0 +1,94 @@
+.walkthrough {
+  height: 45.0625em;
+  position: relative;
+  font-size: clamp(0.69em, 0.8vw + 0.08em,1em);
+  & .container {
+    justify-content: center;
+  }
+  & .walkthrough-bg {
+    background: var(--clr-section-bg);
+    position: absolute;
+    height: 33em;
+    left: 0;
+    right: 0;
+    top: calc(50% - 33em/2 + 1.34375em);
+    z-index: -1;
+  }
+  & .walkthrough-mask {
+    position: absolute;
+    height: 30em;
+    background-color: var(--clr-neutrals-0);
+    left: 0;
+    right: 0;
+    bottom: -25.3em;
+    z-index: -2;
+  }
+  & .walkthrough-cards {
+    height: 45.0625em;
+    overflow: inherit;
+  }
+}
+
+.intro-card {
+  padding: 0.75em;
+  z-index: 20;
+
+  width: 33.25em;
+  height: 42.25em;
+
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #DAE4F2;
+
+  box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 2em;
+
+  &:first-child {
+    transform: translate(5em, 2em) rotate(-3deg);
+    z-index: 10;
+  }
+  &:last-child {
+    transform: translate(-5em, 2em) rotate(3deg);
+  }
+  & .intro-card-top {
+    position: relative;
+    background: linear-gradient(102.47deg, #7296EB -5.34%, #EAC0E9 106.58%, #EAC0E9 106.58%);
+    border: 1px solid #DAE4F2;
+    border-radius: 1.5em 1.5em 0 0;
+    height: 31.125em;
+    overflow: hidden;
+  }
+  & .intro-card-bottom {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1em 1.5em 1.5em;
+    gap: 0.75em;
+
+    width: 31.75em;
+    height: 9.625em;
+
+    background: #FFFFFF;
+    /* Neutrals/300 */
+
+    border: 1px solid #DAE4F2;
+    border-radius: 0 0 1.5em 1.5em;
+
+    & .intro-card-head {
+      gap: 1em;
+      align-items: center;
+      & h3 {
+        font-size: max(1.5rem, 2em);
+      }
+      & .intro-card-icon-box {
+        background: var(--clr-brand-light);
+        border-radius: 0.5em;
+        padding: 0.25em;
+      }
+    }
+
+    & p {
+      max-width: 21em;
+      font-size: max(0.75rem, 1.125em);
+    }
+  }
+}

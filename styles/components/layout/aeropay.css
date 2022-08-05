@@ -24,6 +24,7 @@
     }
     @media (max-height: 23.75em) and (orientation: landscape) {
       top: 8.2em;
+      right: 1.25em;
     }
   }
   @media (min-width: 67.5rem) {
@@ -39,6 +40,7 @@
   @media (max-height: 23.75em) and (orientation: landscape) {
     position: fixed;
     top: 0.25em;
+    right: 1.25em;
   }
   & .aeropay-header {
     align-items: center;
@@ -46,6 +48,9 @@
     border-bottom: 1px solid var(--clr-neutrals-300);
     @media (min-width: 67.5rem){
       padding: 1em 1.5em;
+    }
+    & img {
+      cursor: pointer;
     }
   }
   & .aeropay-content {
@@ -95,6 +100,7 @@
   padding: 0.25em;
   width: 100%;
   border-radius: 0.75em;
+  cursor: pointer;
   &.active {
     background: var(--clr-brand-default)
   }

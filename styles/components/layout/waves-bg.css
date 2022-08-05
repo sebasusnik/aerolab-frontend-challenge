@@ -1,5 +1,5 @@
 .waves-bg {
-  z-index: -1;
+  z-index: -10;
   background-image: url('../../../public/waves-bg.svg');
   background-size: 136.5em 83.375em;
   width: 100vw;

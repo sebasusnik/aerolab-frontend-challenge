@@ -17,6 +17,7 @@
 @import './components/layout/cta.css';
 @import './components/layout/loader.css';
 
-@import './components/pages/landing.css';
+@import './components/page/landing.css';
+@import './components/page/walkthrough.css';
 
 
