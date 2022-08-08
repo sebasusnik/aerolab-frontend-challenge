@@ -1,10 +1,11 @@
 .landing{
-  padding-top: 6.6em;
-  padding-bottom: 2em;
-  margin-bottom: 5em;
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+  margin-bottom: 5rem;
   flex-direction: column;
   align-items: center;
   @media (min-width: 67.5rem){
+    font-size: clamp(0.69em, 0.8vw + 0.05em, 1em);
     flex-direction: row;
     align-items: inherit;
     gap: 3.5em;
@@ -19,48 +20,58 @@
       align-items: inherit;
       text-align: inherit;
       gap: 0;
-      width: 37.5em;
-      height: clamp(25.2em, 28vw + 4.5em, 37.5em);
+      height: 37.5em;
     }
     & .landing-heading {
       flex-direction: column;
+      gap: 0.5em;
+      & > * {
+        display: block;
+      }
+      @media (min-width: 67.5rem) {
+        & .secondary:first-child {
+          font-size: max(1rem, 1.125em);
+        }
+      }
       & .landing-title {
         margin-top: calc(-5% + 0.1rem);
+        @media (min-width: 67.5rem) {
+          font-size: 12.5em;
+        }
       }
     }
     & p {
       margin: 0 auto 1em;
       max-width: 18.0625em;
       @media (min-width: 67.5rem) {
-        font-size: clamp(1em, 1.1vw + 0.02em, 1.25em);
+        font-size: max(1rem, 1.125em);
         max-width: 28.5em;
         margin: 0.5em 0 1em;
       }
     }
     & .landing-cta {
-      font-size: 1em;
       width: 18.9375em;
       height: 4em;
       gap: 0.75em;
       margin: auto;
-      border-radius: 1.5em;
-      @media (min-width: 67.5rem) {
-        font-size: clamp(0.85em, 0.9vw + 0.02em,1em);
-      }
+      border-radius: 1.5rem;
       & span {
-        font-size: 1.125em;
+        font-size: 1em;
       }
       & .cta-arrow {
         width: 0.75em;
         @media (min-width: 67.5rem) {
-          width: 1em;
+          width: max(0.75rem, 1em);
         }
       }
       @media (min-width: 67.5rem) {
-        width: 19.9em;
-        height: 5em;
-        gap: 1.5em;
+        width: max(18.9375rem, 19.9em);
+        height: max(4rem, 5em);
+        gap: max(0.75rem, 1.5em);
         margin: auto 0%;
+        & span {
+          font-size: max(1rem, 1.125em);
+        }
       }
     }
   }
@@ -79,10 +90,10 @@
     }
     @media (min-width: 67.5rem) {
       width: inherit;
-      height: clamp(25.5em, 28vw + 4.5em, 37.5em); /* this line scales the entire container dynamically */
+      height: 37.5em; /* this line scales the entire container dynamically */
       aspect-ratio: 722 / 600;
       background: var(--clr-section-bg);
-      border-radius: clamp(4.42em, 5vw + 1em, 6.5em); /* mantain the border radius while scaling */
+      border-radius: 6.5em; /* mantain the border radius while scaling */
       box-shadow: 0px 0.25em 1em rgba(0, 0, 0, 0.12);
       & span {
         overflow: visible !important; /* overwrites next/image component styles for this case */
