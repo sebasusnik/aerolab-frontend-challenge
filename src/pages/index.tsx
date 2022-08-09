@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         <section className="landing flex">
           <div className="landing-content flex">
             <h1 role="heading" aria-level={1} className="landing-heading flex">
-              <span className="text-lg allcaps secondary">Explore the</span> <br />
+              <span className="text-lg allcaps secondary">Explore the</span>
               <span className="landing-title title-lg">
                 <span className="brand">TECH</span> <br />
                 <span>ZONE</span>
@@ -61,73 +61,79 @@ const Home: NextPage = () => {
 
       <section id="products" tabIndex={-1} className="walkthrough">
         <div className="walkthrough-cards container flex">
-          <article className="intro-card">
-            <div className="intro-card-top">
-              <Image
-                src={browseImage}
-                layout="fill"
-                objectFit="cover"
-                quality={80}
-                placeholder="blur"
-                alt=""
-              />
-            </div>
-            <div className="intro-card-bottom flex">
-              <div className="intro-card-head flex">
-                <div className="intro-card-icon-box flex">
-                  <img className="icon-md" src="icons/walkthrough-1.svg" alt="" />
+          <article className="intro-card-wrapper">
+            <div className="intro-card flex">
+              <div className="intro-card-bottom flex">
+                <div className="intro-card-head flex">
+                  <div className="intro-card-icon-box flex">
+                    <img className="icon-lg" src="icons/walkthrough-1.svg" alt="" />
+                  </div>
+                  <h3 className="title-sm allcaps brand">1—browse</h3>
                 </div>
-                <h3 className="title-sm allcaps brand">1—browse</h3>
+                <p className="text-lg secondary">
+                  Browse our tech catalog with more than 20 top tech products
+                </p>
               </div>
-              <p className="text-lg secondary">
-                Browse our tech catalog with more than 20 top tech products
-              </p>
+              <div className="intro-card-top">
+                <Image
+                  src={browseImage}
+                  layout="fill"
+                  objectFit="contain"
+                  quality={80}
+                  placeholder="blur"
+                  alt=""
+                />
+              </div>
             </div>
           </article>
-          <article className="intro-card">
-            <div className="intro-card-top">
-              <Image
-                src={chooseImage}
-                layout="fill"
-                objectFit="cover"
-                quality={80}
-                placeholder="blur"
-                alt=""
-              />
-            </div>
-            <div className="intro-card-bottom flex">
-              <div className="intro-card-head flex">
-                <div className="intro-card-icon-box flex">
-                  <img className="icon-md" src="icons/walkthrough-2.svg" alt="" />
+          <article className="intro-card-wrapper">
+            <div className="intro-card flex">
+              <div className="intro-card-bottom flex">
+                <div className="intro-card-head flex">
+                  <div className="intro-card-icon-box flex">
+                    <img className="icon-lg" src="icons/walkthrough-2.svg" alt="" />
+                  </div>
+                  <h3 className="title-sm allcaps brand">2—choose</h3>
                 </div>
-                <h3 className="title-sm allcaps brand">2—choose</h3>
+                <p className="text-lg secondary">
+                  Exchange your hard earned AeroPoints for the item you want
+                </p>
               </div>
-              <p className="text-lg secondary">
-                Exchange your hard earned AeroPoints for the item you want
-              </p>
+              <div className="intro-card-top">
+                <Image
+                  src={chooseImage}
+                  layout="fill"
+                  objectFit="contain"
+                  quality={80}
+                  placeholder="blur"
+                  alt=""
+                />
+              </div>
             </div>
           </article>
-          <article className="intro-card">
-            <div className="intro-card-top">
-              <Image
-                src={enjoyImage}
-                layout="fill"
-                objectFit="cover"
-                quality={80}
-                placeholder="blur"
-                alt=""
-              />
-            </div>
-            <div className="intro-card-bottom flex">
-              <div className="intro-card-head flex">
-                <div className="intro-card-icon-box flex">
-                  <img className="icon-md" src="icons/walkthrough-3.svg" alt="" />
+          <article className="intro-card-wrapper">
+            <div className="intro-card flex">
+              <div className="intro-card-bottom flex">
+                <div className="intro-card-head flex">
+                  <div className="intro-card-icon-box flex">
+                    <img className="icon-lg" src="icons/walkthrough-3.svg" alt="" />
+                  </div>
+                  <h3 className="title-sm allcaps brand">3—enjoy!</h3>
                 </div>
-                <h3 className="title-sm allcaps brand">3—enjoy!</h3>
+                <p className="text-lg secondary">
+                  All done, you can relax! We’ll take care of delivery of your tech item!
+                </p>
               </div>
-              <p className="text-lg secondary">
-                All done, you can relax! We’ll take care of delivery of your tech item!
-              </p>
+              <div className="intro-card-top">
+                <Image
+                  src={enjoyImage}
+                  layout="fill"
+                  objectFit="contain"
+                  quality={80}
+                  placeholder="blur"
+                  alt=""
+                />
+              </div>
             </div>
           </article>
         </div>

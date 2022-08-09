@@ -30,9 +30,10 @@
   }
 }
 
-.intro-card {
+.intro-card-wrapper {
   padding: 0.75em;
   z-index: 20;
+  position: relative;
 
   width: 33.25em;
   height: 42.25em;
@@ -50,48 +51,61 @@
   &:last-child {
     transform: translate(-5em, 2em) rotate(3deg);
   }
-  & .intro-card-top {
-    position: relative;
-    background: linear-gradient(102.47deg, #7296EB -5.34%, #EAC0E9 106.58%, #EAC0E9 106.58%);
-    border: 1px solid #DAE4F2;
-    border-radius: 1.5em 1.5em 0 0;
-    height: 31.125em;
-    width: 31.75em;
+  & .intro-card {
+    flex-direction: column-reverse;
     overflow: hidden;
-  }
-  & .intro-card-bottom {
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 1em 1.5em 1.5em;
-    gap: 1em;
-
-    height: 9.625em;
+    border: 1px solid #DAE4F2;
+    border-radius: 1.5em;
     width: 31.75em;
+    height: 40.75em;
 
-    background: var(--clr-neutrals-0);
-    /* Neutrals/300 */
-
-    border: 1px solid var(--clr-neutrals-300);
-    border-top: none;
-    border-radius: 0 0 1.5em 1.5em;
-
-    & .intro-card-head {
-      gap: 1em;
-      align-items: center;
-      & h3 {
-        font-size: max(1.5rem, 2em);
-      }
-      & .intro-card-icon-box {
-        background: var(--clr-brand-light);
-        border-radius: 0.5em;
-        padding: max(0.25rem, 0.375em);
+    & .intro-card-top {
+      position: relative;
+      background: linear-gradient(102.47deg, #7296EB -5.34%, #EAC0E9 106.58%, #EAC0E9 106.58%);
+      height: 31.125em;
+      width: 100%;
+      bottom: 0;
+      overflow: hidden;
+      & span {
+        position: absolute;
+        bottom: 0;
       }
     }
+    & .intro-card-bottom {
+      position: relative;
+      bottom: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 1em 1.5em 1.5em;
+      gap: 1em;
+  
+      height: max(8.875rem, 9.625em);
+      width: 31.75em;
+  
+      background: var(--clr-neutrals-0);
+      /* Neutrals/300 */
+  
+      border-top: 1px solid var(--clr-neutrals-300);
 
-    & p {
-      max-width: 21em;
-      font-size: max(0.75rem, 1.125em);
+      & .intro-card-head {
+        gap: 1em;
+        align-items: center;
+        & h3 {
+          font-size: max(1.5rem, 2em);
+        }
+        & .intro-card-icon-box {
+          background: var(--clr-brand-light);
+          border-radius: 0.5em;
+          padding: max(0.25rem, 0.375em);
+        }
+      }
+  
+      & p {
+        max-width: 21em;
+        font-size: max(1rem, 1.125em);
+      }
     }
   }
+
 }
