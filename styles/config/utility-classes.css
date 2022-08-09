@@ -74,7 +74,7 @@ z-index: 100;
   font-size: var(--fs-700);
   font-weight: 900;
   line-height: 80%;
-  @media (min-width: 67.5rem) {
+  @media (min-width: 78.75rem) {
     font-size: var(--fs-800);
   }
 }
@@ -87,7 +87,7 @@ z-index: 100;
   &.allcaps {
     text-transform: uppercase;
   }
-  @media (min-width: 67.5rem) {
+  @media (min-width: 78.75rem) {
     font-size: var(--fs-700);
   }
 }
@@ -104,7 +104,7 @@ z-index: 100;
     letter-spacing: 0.24em;
     text-transform: uppercase;
   }
-  @media (min-width: 67.5rem) {
+  @media (min-width: 78.75rem) {
     font-size: var(--fs-500);
   }
 }
@@ -118,7 +118,7 @@ z-index: 100;
     letter-spacing: 0.05em;
     text-transform: uppercase;
   }
-  @media (min-width: 67.5rem) {
+  @media (min-width: 78.75rem) {
     font-size: var(--fs-300);
   }
 }
@@ -202,7 +202,7 @@ z-index: 100;
 .icon-sm {
   height: 1.25em;
   width: 1.25em;
-  @media (min-width: 67.5rem) {
+  @media (min-width: 78.75rem) {
     height: 1.5em;
     width: 1.5em;
   }
@@ -211,7 +211,7 @@ z-index: 100;
 .icon-md {
   height: 1.5em;
   width: 1.5em;
-  @media (min-width: 67.5rem) {
+  @media (min-width: 78.75rem) {
     height: 2em;
     width: 2em;
   }
@@ -220,7 +220,7 @@ z-index: 100;
 .icon-lg {
   height: 2em;
   width: 2em;
-  @media (min-width: 67.5rem) {
+  @media (min-width: 78.75rem) {
     height: 2.5em;
     width: 2.5em;
   }

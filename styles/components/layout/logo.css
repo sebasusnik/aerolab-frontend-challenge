@@ -2,7 +2,7 @@
   background-image: url('../../../public/icons/aerolab-logo-2.svg');
   width: 3em;
   height: 3em;
-  @media (min-width: 1080px) {
+  @media (min-width: 78.75rem) {
     height: 3em;
     background-image: url('../../../public/icons/aerolab-logo-1.svg');
     width: 7.875em;

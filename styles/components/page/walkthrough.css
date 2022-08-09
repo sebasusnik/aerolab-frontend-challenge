@@ -1,12 +1,12 @@
 .walkthrough {
   position: relative;
   top: -4.5rem;
-  @media (min-width: 56.25rem) {
+  @media (min-width: 48rem) {
     top: -7em;
   }
-  @media (min-width: 67.5rem) {
+  @media (min-width: 78.75rem) {
     top: 0;
-    font-size: clamp(0.69em, 0.8vw + 0.08em,1em);
+    font-size: clamp(0.7em, 0.8vw + 0.08em,1em);
   }
   & .container {
     justify-content: center;
@@ -19,10 +19,10 @@
     right: 0;
     top: -24em;
     bottom: -2em;
-    @media (min-width: 56.25rem) {
-      top: -10.5em;
+    @media (min-width: 48rem) {
+      top: -8.5rem;
     }
-    @media (min-width: 67.5rem) {
+    @media (min-width: 78.75rem) {
       height: 33em;
       top: calc(50% - 33em/2 + 1.34375em);
     }
@@ -42,12 +42,13 @@
     padding-top: 0.5em;
     flex-direction: column;
     overflow: inherit;
-    @media (min-width: 56.25rem) {
+    @media (min-width: 48rem) {
       gap: 0.5rem;
       flex-direction: row;
       max-width: 100%;
+      font-size: clamp(0.7em, 1.2vw + 0.25em, 1em);
     }
-    @media (min-width: 67.5rem) {
+    @media (min-width: 78.75rem) {
 
     }
   }
@@ -65,11 +66,11 @@
   box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.05);
   border-radius: 2rem;
 
-  @media (min-width: 56.25rem) {
+  @media (min-width: 48rem) {
     height: 29.8125em;
   }
   
-  @media (min-width: 67.5rem) {
+  @media (min-width: 78.75rem) {
     z-index: 20;
     width: 33.25em;
     height: 42.25em;
@@ -88,7 +89,7 @@
     border: 1px solid #DAE4F2;
     border-radius: 1.5rem;
     height: 100% ;
-    @media (min-width: 67.5rem) {
+    @media (min-width: 78.75rem) {
       width: 31.75em;
     }
     & .intro-card-image-holder {
@@ -101,11 +102,14 @@
         & img {
           &.table {
             inset: auto !important;
-            height: 15em !important;
+            height: 100% !important;
             min-height: unset !important;
             max-height: unset !important;
             bottom: 0px !important;
-            @media (min-width: 67.5rem) {
+            @media (min-width: 48rem) {
+              height: 15em !important;
+            }
+            @media (min-width: 78.75rem) {
               height: 30em !important;
             }          
           }
@@ -138,7 +142,7 @@
           padding: 0.25rem;
           width: 2.5rem;
         }
-        @media (min-width: 67.5rem) {
+        @media (min-width: 78.75rem) {
           & h3 {
             white-space: normal;
             font-size: max(1.5rem, 2em);
@@ -160,7 +164,9 @@
       & .intro-card-text {
         max-width: 24.5em;
         & p {
-          font-size: max(1rem, 1.125em);
+          @media (min-width: 78.75rem) {
+            font-size: max(1rem, 1.125em);
+          }
         }
       }
     }

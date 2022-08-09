@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2em;
-  @media (min-width: 67.5rem){
+  @media (min-width: 78.75rem){
     font-size: clamp(0.69em, 0.8vw + 0.05em, 1em);
     flex-direction: row;
     align-items: inherit;
@@ -17,7 +17,7 @@
     text-align: center;
     gap: 1.5em;
     z-index: 80;
-    @media (min-width: 67.5rem) {
+    @media (min-width: 78.75rem) {
       align-items: inherit;
       text-align: inherit;
       gap: 0;
@@ -29,14 +29,14 @@
       & > * {
         display: block;
       }
-      @media (min-width: 67.5rem) {
+      @media (min-width: 78.75rem) {
         & .secondary:first-child {
           font-size: max(1rem, 1.125em);
         }
       }
       & .landing-title {
         margin-top: calc(-5% + 0.1rem);
-        @media (min-width: 67.5rem) {
+        @media (min-width: 78.75rem) {
           font-size: 12.5em;
         }
       }
@@ -44,7 +44,7 @@
     & p {
       margin: 0 auto 1.25em;
       max-width: 18.0625em;
-      @media (min-width: 67.5rem) {
+      @media (min-width: 78.75rem) {
         font-size: max(1rem, 1.125em);
         max-width: 28.5em;
         margin: 0.5em 0 1em;
@@ -61,11 +61,11 @@
       }
       & .cta-arrow {
         width: 0.75em;
-        @media (min-width: 67.5rem) {
+        @media (min-width: 78.75rem) {
           width: max(0.75rem, 1em);
         }
       }
-      @media (min-width: 67.5rem) {
+      @media (min-width: 78.75rem) {
         width: max(18.9375rem, 19.9em);
         height: max(4rem, 5em);
         gap: max(0.75rem, 1.5em);
@@ -81,8 +81,9 @@
     height: 28em;
     width: 22em;
     margin-bottom: 0.2em;
-    @media (min-width: 56.25rem) {
-      width: 20em;
+    @media (min-width: 48rem) {
+      bottom: -1.2em;
+      width: clamp(17.5em,25vw + 2em,22em);
     }
     & span {
       overflow: visible !important; /* overwrites next/image component styles for this case */
@@ -93,7 +94,7 @@
       transform-origin: bottom;
       objet-fit: cover !important;
     }
-    @media (min-width: 67.5rem) {
+    @media (min-width: 78.75rem) {
       width: inherit;
       height: 37.5em; /* this line scales the entire container dynamically */
       aspect-ratio: 722 / 600;
