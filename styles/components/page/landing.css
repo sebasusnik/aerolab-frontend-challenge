@@ -1,5 +1,5 @@
 .landing{
-  padding-top: 7rem;
+  padding-top: 6.2rem;
   padding-bottom: 2rem;
   margin-bottom: 5rem;
   flex-direction: column;
@@ -18,13 +18,13 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1.5em;
+    gap: 2em;
     z-index: 80;
     @media (min-width: 78.75rem) {
       padding-top: 1em;
       align-items: inherit;
       text-align: inherit;
-      gap: 0.75em;
+      gap: 1.25em;
       height: 37.5em;
     }
     & .landing-heading {
@@ -34,6 +34,8 @@
         display: block;
       }
       @media (min-width: 78.75rem) {
+        gap: 2em;
+
         & .secondary:first-child {
           font-size: max(1rem, 1.125em);
         }
@@ -46,12 +48,12 @@
       }
     }
     & p {
-      margin: 0 auto 1.25em;
       max-width: 18.0625em;
+      margin-bottom: 1.5em;
       @media (min-width: 78.75rem) {
+        margin-bottom: 0;
         font-size: max(1rem, 1.125em);
         max-width: 28.5em;
-        margin: 0.5em 0 1em;
       }
     }
     & .landing-cta {
