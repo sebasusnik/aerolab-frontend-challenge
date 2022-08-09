@@ -24,7 +24,7 @@
     }
     @media (min-width: 78.75rem) {
       height: 33em;
-      top: calc(50% - 33em/2 + 1.34375em);
+      top: calc(50% - 13.2em);
     }
   }
   & .walkthrough-mask {
