@@ -83,6 +83,7 @@ ul {
 
 a {
   text-decoration: none;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 
 /* remove focus outline to the article when skip to content */
