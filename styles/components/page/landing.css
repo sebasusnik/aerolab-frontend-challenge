@@ -78,8 +78,12 @@
   }
   & .landing-illustration {
     position: relative;
-    height: 30em;
-    width: 24.17em;
+    height: 28em;
+    width: 22em;
+    margin-bottom: 0.2em;
+    @media (min-width: 56.25rem) {
+      width: 20em;
+    }
     & span {
       overflow: visible !important; /* overwrites next/image component styles for this case */
     }
