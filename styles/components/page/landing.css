@@ -4,7 +4,7 @@
   margin-bottom: 5rem;
   flex-direction: column;
   align-items: center;
-  gap: 2em;
+  gap: 1em;
   @media (min-width: 78.75rem){
     font-size: clamp(0.69em, 0.8vw + 0.05em, 1em);
     flex-direction: row;
@@ -83,7 +83,7 @@
     margin-bottom: 0.2em;
     @media (min-width: 48rem) {
       bottom: -1.2em;
-      width: clamp(17.5em,25vw + 2em,22em);
+      width: clamp(17.5em, 26vw + 5em, 24em);
     }
     & span {
       overflow: visible !important; /* overwrites next/image component styles for this case */
