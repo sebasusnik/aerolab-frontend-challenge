@@ -63,18 +63,20 @@ const Home: NextPage = () => {
         <div className="walkthrough-cards container flex">
           <article className="intro-card-wrapper">
             <div className="intro-card flex">
-              <div className="intro-card-bottom flex">
+              <div className="intro-card-content flex">
                 <div className="intro-card-head flex">
                   <div className="intro-card-icon-box flex">
                     <img className="icon-lg" src="icons/walkthrough-1.svg" alt="" />
                   </div>
                   <h3 className="title-sm allcaps brand">1—browse</h3>
                 </div>
-                <p className="text-lg secondary">
-                  Browse our tech catalog with more than 20 top tech products
-                </p>
+                <div className="intro-card-text">
+                  <p className="text-lg secondary">
+                    Browse our tech catalog with more than 20 top tech products
+                  </p>
+                </div>
               </div>
-              <div className="intro-card-top">
+              <div className="intro-card-image-holder">
                 <Image
                   src={browseImage}
                   layout="fill"
@@ -88,18 +90,20 @@ const Home: NextPage = () => {
           </article>
           <article className="intro-card-wrapper">
             <div className="intro-card flex">
-              <div className="intro-card-bottom flex">
+              <div className="intro-card-content flex">
                 <div className="intro-card-head flex">
                   <div className="intro-card-icon-box flex">
                     <img className="icon-lg" src="icons/walkthrough-2.svg" alt="" />
                   </div>
                   <h3 className="title-sm allcaps brand">2—choose</h3>
                 </div>
-                <p className="text-lg secondary">
-                  Exchange your hard earned AeroPoints for the item you want
-                </p>
+                <div className="intro-card-text">
+                  <p className="text-lg secondary">
+                    Exchange your hard earned AeroPoints for the item you want
+                  </p>
+                </div>
               </div>
-              <div className="intro-card-top">
+              <div className="intro-card-image-holder">
                 <Image
                   src={chooseImage}
                   layout="fill"
@@ -113,19 +117,22 @@ const Home: NextPage = () => {
           </article>
           <article className="intro-card-wrapper">
             <div className="intro-card flex">
-              <div className="intro-card-bottom flex">
+              <div className="intro-card-content flex">
                 <div className="intro-card-head flex">
                   <div className="intro-card-icon-box flex">
                     <img className="icon-lg" src="icons/walkthrough-3.svg" alt="" />
                   </div>
                   <h3 className="title-sm allcaps brand">3—enjoy!</h3>
                 </div>
-                <p className="text-lg secondary">
-                  All done, you can relax! We’ll take care of delivery of your tech item!
-                </p>
+                <div className="intro-card-text">
+                  <p className="text-lg secondary">
+                    All done, you can relax! We’ll take care of delivery of your tech item!
+                  </p>
+                </div>
               </div>
-              <div className="intro-card-top">
+              <div className="intro-card-image-holder">
                 <Image
+                  className="table"
                   src={enjoyImage}
                   layout="fill"
                   objectFit="contain"

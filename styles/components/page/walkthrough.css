@@ -1,18 +1,27 @@
 .walkthrough {
-  height: 45.0625em;
   position: relative;
-  font-size: clamp(0.69em, 0.8vw + 0.08em,1em);
+  margin-top: -4.5em;
+  @media (min-width: 67.5rem) {
+    font-size: clamp(0.69em, 0.8vw + 0.08em,1em);
+  }
   & .container {
     justify-content: center;
   }
   & .walkthrough-bg {
     background: var(--clr-section-bg);
     position: absolute;
-    height: 33em;
+    z-index: -1;
     left: 0;
     right: 0;
-    top: calc(50% - 33em/2 + 1.34375em);
-    z-index: -1;
+    top: -26.5em;
+    bottom: -2em;
+    @media (min-width: 54.375em) {
+      top: -11.5em;
+    }
+    @media (min-width: 67.5rem) {
+      height: 33em;
+      top: calc(50% - 33em/2 + 1.34375em);
+    }
   }
   & .walkthrough-mask {
     position: absolute;
@@ -24,54 +33,82 @@
     z-index: -2;
   }
   & .walkthrough-cards {
-    height: 45.0625em;
+    gap: 1.5rem;
+    max-width: 36rem;
     padding-top: 0.5em;
+    flex-direction: column;
     overflow: inherit;
+    @media (min-width: 54.375em) {
+      gap: 0.5rem;
+      flex-direction: row;
+      max-width: 100%;
+    }
+    @media (min-width: 67.5rem) {
+
+    }
   }
 }
 
 .intro-card-wrapper {
+  height: calc(30em + 4vw);
   padding: 0.75em;
-  z-index: 20;
   position: relative;
-
-  width: 33.25em;
-  height: 42.25em;
-
+  
+  
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid var(--clr-neutrals-300);
-
+  
   box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.05);
-  border-radius: 2em;
+  border-radius: 2rem;
 
-  &:first-child {
-    transform: translate(5em, 2em) rotate(-3deg);
-    z-index: 10;
+  @media (min-width: 54.375em) {
+    height: 29.8125em;
   }
-  &:last-child {
-    transform: translate(-5em, 2em) rotate(3deg);
+  
+  @media (min-width: 67.5rem) {
+    z-index: 20;
+    width: 33.25em;
+    height: 42.25em;
+    
+    &:first-child {
+      transform: translate(calc(5em + 0.5rem), 2em) rotate(-3deg);
+      z-index: 10;
+    }
+    &:last-child {
+      transform: translate(calc(-5em - 0.5rem), 2em) rotate(3deg);
+    }
   }
   & .intro-card {
-    flex-direction: column-reverse;
+    flex-direction: column-reverse; /* this way manage better content size and image overflow */
     overflow: hidden;
     border: 1px solid #DAE4F2;
-    border-radius: 1.5em;
-    width: 31.75em;
-    height: 40.75em;
-
-    & .intro-card-top {
+    border-radius: 1.5rem;
+    height: 100% ;
+    @media (min-width: 67.5rem) {
+      width: 31.75em;
+    }
+    & .intro-card-image-holder {
       position: relative;
       background: linear-gradient(102.47deg, #7296EB -5.34%, #EAC0E9 106.58%, #EAC0E9 106.58%);
-      height: 31.125em;
-      width: 100%;
-      bottom: 0;
+      height: 100%;
       overflow: hidden;
       & span {
-        position: absolute;
-        bottom: 0;
+        bottom: -2px !important;
+        & img {
+          &.table {
+            inset: auto !important;
+            height: 15em !important;
+            min-height: unset !important;
+            max-height: unset !important;
+            bottom: 0px !important;
+            @media (min-width: 67.5rem) {
+              height: 30em !important;
+            }          
+          }
+        }
       }
     }
-    & .intro-card-bottom {
+    & .intro-card-content {
       position: relative;
       bottom: 0;
       flex-direction: column;
@@ -79,10 +116,7 @@
       align-items: flex-start;
       padding: 1em 1.5em 1.5em;
       gap: 1em;
-  
-      height: max(8.875rem, 9.625em);
-      width: 31.75em;
-  
+    
       background: var(--clr-neutrals-0);
       /* Neutrals/300 */
   
@@ -92,18 +126,38 @@
         gap: 1em;
         align-items: center;
         & h3 {
-          font-size: max(1.5rem, 2em);
+          white-space: nowrap;
         }
         & .intro-card-icon-box {
           background: var(--clr-brand-light);
-          border-radius: 0.5em;
-          padding: max(0.25rem, 0.375em);
+          border-radius: 0.5rem;
+          padding: 0.25rem;
+          width: 2.5rem;
+        }
+        @media (min-width: 67.5rem) {
+          & h3 {
+            white-space: normal;
+            font-size: max(1.5rem, 2em);
+          }
+          & .intro-card-icon-box {
+            padding: max(0.25rem, 0.375em);
+            height: max(2.5rem, 3em);
+            width: max(2.5rem, 3em);
+            text-align: center;
+            align-items: center;
+            & .icon-lg {
+              height: 2.5rem;
+              width: 2.5rem;
+            }
+          }
         }
       }
   
-      & p {
-        max-width: 21em;
-        font-size: max(1rem, 1.125em);
+      & .intro-card-text {
+        max-width: 24.5em;
+        & p {
+          font-size: max(1rem, 1.125em);
+        }
       }
     }
   }

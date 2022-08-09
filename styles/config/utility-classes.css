@@ -220,7 +220,7 @@ z-index: 100;
 .icon-lg {
   height: 2em;
   width: 2em;
-  @media (min-width: 67.5em) {
+  @media (min-width: 67.5rem) {
     height: 2.5em;
     width: 2.5em;
   }
