@@ -38,7 +38,7 @@
   }
   & .walkthrough-cards {
     gap: 1.5rem;
-    max-width: 30rem;
+    max-width: 29rem;
     padding-top: 0.5em;
     flex-direction: column;
     overflow: inherit;
@@ -47,9 +47,6 @@
       flex-direction: row;
       max-width: var(--page-width);
       font-size: clamp(0.7em, 1.2vw + 0.25em, 1em);
-    }
-    @media (min-width: 78.75rem) {
-
     }
   }
 }
