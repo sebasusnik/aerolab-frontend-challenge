@@ -18,7 +18,7 @@ const AeroCoin: React.FC<Props> = ({isOpen, points, closeAeroPay, handleClick, c
   const aeroCoinRef = useRef<HTMLButtonElement | null>(null);
   const pressed = usePressObserver({watchKey: 'Escape'});
 
-  const isDesktop = useMediaQuery('(min-width: 1080px)');
+  const isDesktop = useMediaQuery('(min-width: 1260px)');
 
   const user = useUser();
   const status = useUserStatus();

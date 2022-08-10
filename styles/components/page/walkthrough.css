@@ -1,40 +1,16 @@
 .walkthrough {
   position: relative;
   top: -4.5rem;
+  padding-bottom: 2em;
   @media (min-width: 48rem) {
     top: -7em;
   }
   @media (min-width: 78.75rem) {
-    top: 0;
+    top: 1.5em;
     font-size: clamp(0.7em, 0.8vw + 0.08em,1em);
   }
   & .container {
     justify-content: center;
-  }
-  & .walkthrough-bg {
-    background: var(--clr-section-bg);
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    top: -24em;
-    bottom: -2em;
-    @media (min-width: 48rem) {
-      top: -8.5rem;
-    }
-    @media (min-width: 78.75rem) {
-      height: 33em;
-      top: calc(50% - 13.2em);
-    }
-  }
-  & .walkthrough-mask {
-    position: absolute;
-    height: 30em;
-    background-color: var(--clr-neutrals-0);
-    left: 0;
-    right: 0;
-    bottom: -25.3em;
-    z-index: -2;
   }
   & .walkthrough-cards {
     gap: 1.5rem;
@@ -47,6 +23,35 @@
       flex-direction: row;
       max-width: var(--page-width);
       font-size: clamp(0.7em, 1.2vw + 0.25em, 1em);
+    }
+  }
+  & .walkthrough-bg {
+    background: var(--clr-section-bg);
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: -24em;
+    bottom: 0;
+    @media (min-width: 48rem) {
+      top: -7.5rem;
+    }
+    @media (min-width: 78.75rem) {
+      height: 33em;
+      top: calc(50% - 14.2em);
+    }
+  }
+  & .walkthrough-mask {
+    display: none;
+    @media (min-width: 78.75rem){
+      display: block;
+      position: absolute;
+      height: 30em;
+      background-color: var(--clr-neutrals-0);
+      left: 0;
+      right: 0;
+      bottom: -26.3em;
+      z-index: -2;
     }
   }
 }
