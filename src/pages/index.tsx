@@ -20,8 +20,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/icons/aerolab-logo-2.svg" />
       </Head>
 
-      <div className="container">
-        <section className="landing flex">
+      <section className="container">
+        <div className="landing flex">
           <div className="landing-content flex">
             <h1 role="heading" aria-level={1} className="landing-heading flex">
               <span className="text-lg allcaps secondary">Explore the</span>
@@ -56,8 +56,8 @@ const Home: NextPage = () => {
               alt="Futuristic guy playing with a VR"
             />
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       <section id="products" tabIndex={-1} className="walkthrough">
         <div className="walkthrough-cards container flex">
@@ -126,7 +126,7 @@ const Home: NextPage = () => {
                 </div>
                 <div className="intro-card-text">
                   <p className="text-lg secondary">
-                    All done, you can relax! We’ll take care of delivery of your tech item!
+                    All done, you can relax! We&#8217;ll take care of delivery of your tech item!
                   </p>
                 </div>
               </div>
