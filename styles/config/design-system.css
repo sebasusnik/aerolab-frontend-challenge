@@ -11,7 +11,7 @@
   /* media querys for xxxs and xxxl screens */
 
   @media (max-width: 22.5em) {
-    font-size: clamp(.74em, 4vw + .1em, 1em);
+    font-size: clamp(.74em, 4.35vw + .005em, 1em);
   }
   @media (min-width: 120em) {
     font-size: clamp(1em, 0.82vw + .001em, 1.5em);
