@@ -98,12 +98,12 @@
       transform-origin: bottom;
     }
     @media (min-width: 48rem) {
-      width: clamp(16.8em, 24vw + 4.5em, 22em);
+      width: clamp(16.8em, 25vw + 4.5em, 22em);
       margin-left: 0.5em;
       margin-top: calc(16vw - 9rem);
       & img {
         top: auto !important;
-        bottom: calc(15.3vw - 19rem) !important;
+        bottom: calc(15vw - 19rem) !important;
       }
     }
     @media (min-width: 78.75rem) {

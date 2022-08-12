@@ -155,6 +155,7 @@
             width: max(2.5rem, 3em);
             text-align: center;
             align-items: center;
+            max-width: 100%;
             & .icon-lg {
               height: 2.5rem;
               width: 2.5rem;
