@@ -142,7 +142,7 @@
           background: var(--clr-brand-light);
           border-radius: 0.5rem;
           padding: 0.25rem;
-          width: 2.5rem;
+          max-width: 2.5rem;
         }
         @media (min-width: 78.75rem) {
           & h3 {
