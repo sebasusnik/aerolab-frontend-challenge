@@ -11,7 +11,7 @@
   }
   @media (min-width: 78.75rem){
     padding-bottom: 2rem;
-    font-size: clamp(0.69em, 0.8vw + 0.05em, 1em);
+    font-size: clamp(0.73em, 0.8vw + 0.05em, 1em);
     flex-direction: row;
     align-items: inherit;
     gap: 3.5em;
