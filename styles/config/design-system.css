@@ -26,7 +26,7 @@
 
   /* =========== SPACING =========== */
 
-  --page-width: clamp(68rem, 77vw + 4rem, 94rem); /* smoothly from 1024px to 1536px */
+  --page-width: clamp(70rem, 77vw + 4.3rem, 94rem); /* smoothly from 1024px to 1536px */
   --gap: 5em, 1.5em;
   --topbar-size: 8em;
 

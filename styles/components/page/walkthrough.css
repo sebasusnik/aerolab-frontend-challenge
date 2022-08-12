@@ -31,7 +31,7 @@
     z-index: -1;
     left: 0;
     right: 0;
-    top: -24em;
+    top: -23.9em;
     bottom: 0;
     @media (min-width: 48rem) {
       top: -7.5rem;
