@@ -99,7 +99,6 @@
     }
     @media (min-width: 48rem) {
       width: clamp(16.8em, 25vw + 4.5em, 22em);
-      margin-left: 0.5em;
       margin-top: calc(16vw - 9rem);
       & img {
         top: auto !important;

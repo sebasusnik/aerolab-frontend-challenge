@@ -88,20 +88,26 @@
   & .intro-card {
     flex-direction: column-reverse; /* this way manage better content size and image overflow */
     overflow: hidden;
-    border: 1px solid #DAE4F2;
-    border-radius: 1.5rem;
     height: 100% ;
     @media (min-width: 78.75rem) {
       width: 100%;
     }
     & .intro-card-image-holder {
-      position: relative;
       background: linear-gradient(102.47deg, #7296EB -5.34%, #EAC0E9 106.58%, #EAC0E9 106.58%);
+      border: 1px solid var(--clr-neutrals-300);
+      border-bottom: 0;
+      border-radius: 1.5rem 1.5rem 0 0;
+
+      position: relative;
       height: 100%;
       overflow: hidden;
       & span {
         bottom: -2px !important;
         & img {
+          top: -1em !important;
+          @media (min-width: 48rem) {
+            top: em !important;
+          }
           &.table {
             inset: auto !important;
             height: 100% !important;
@@ -129,8 +135,9 @@
     
       background: var(--clr-neutrals-0);
       /* Neutrals/300 */
-  
-      border-top: 1px solid var(--clr-neutrals-300);
+
+      border-radius: 0 0 1.5rem 1.5rem;
+      border: 1px solid var(--clr-neutrals-300);
 
       & .intro-card-head {
         gap: 1em;
