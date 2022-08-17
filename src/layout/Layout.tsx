@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
 
-import Topbar from './components/Topbar';
-import WavesBg from './components/WavesBg';
+import dynamic from 'next/dynamic';
+
+const Topbar = dynamic(() => import('./components/Topbar'));
+
+const WavesBg = dynamic(() => import('./components/WavesBg'));
 
 interface Props {
   children: React.ReactNode;
