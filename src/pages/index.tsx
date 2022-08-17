@@ -60,6 +60,8 @@ const Home: NextPage = () => {
       </section>
 
       <section id="products" tabIndex={-1} className="walkthrough">
+        <div className="walkthrough-mask" />
+        <div className="walkthrough-bg" />
         <div className="walkthrough-cards container flex">
           <article className="intro-card-wrapper">
             <div className="intro-card flex">
@@ -144,8 +146,6 @@ const Home: NextPage = () => {
             </div>
           </article>
         </div>
-        <div className="walkthrough-mask" />
-        <div className="walkthrough-bg" />
       </section>
 
       <footer style={styles.footer} />

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
 import Topbar from './components/Topbar';
+import WavesBg from './components/WavesBg';
 
 interface Props {
   children: React.ReactNode;
@@ -28,7 +29,7 @@ const Layout: React.FC<Props> = ({children}) => {
           !!isOpen && setIsOpen(false);
         }}
       >
-        <div className="waves-bg" />
+        <WavesBg />
         {children}
       </main>
     </>

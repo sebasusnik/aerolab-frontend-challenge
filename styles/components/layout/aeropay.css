@@ -102,6 +102,13 @@
   border-radius: 0.75em;
   cursor: pointer;
   &.active {
-    background: var(--clr-brand-default)
+    background: var(--clr-brand-default);
+  }
+  transition: box-shadow 0.1s;
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.08);
+      outline: solid 1px var(--clr-neutrals-0);
+    }
   }
 }

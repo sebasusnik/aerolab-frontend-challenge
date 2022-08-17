@@ -12,11 +12,11 @@
   cursor: pointer;
   @media (hover: hover){   /* deals with hover on devices with no hover support */
     &:hover {
-      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.08);
     }
   }
   &.active {
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.08);
   }
   @media (min-width: 78.75rem) {
     min-width: 10.5em;

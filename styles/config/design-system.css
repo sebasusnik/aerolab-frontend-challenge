@@ -57,6 +57,8 @@
   --clr-neutrals-600: hsla(216 14% 55%);
   --clr-neutrals-900: hsla(215 24% 19%);
 
+  
+
   /* brand */
   --clr-brand-default: linear-gradient(102.47deg, hsl(215, 84%, 51%) -5.34%, hsl(300, 100%, 75%) 106.58%);
   --clr-brand-hover: linear-gradient(102.47deg, #1667D9 -5.34%, #F279F2 106.58%);

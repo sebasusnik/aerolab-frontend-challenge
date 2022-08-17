@@ -5,11 +5,11 @@
 root: {
   [data-theme='dark'] {
     /* neutrals */
-    --clr-neutrals-0: hsla(215 24% 19%);
-    --clr-neutrals-100: hsla(216 14% 55%);
-    --clr-neutrals-200: hsla(215 27% 65%);
-    --clr-neutrals-300: hsla(215 48% 90%);
-    --clr-neutrals-500: hsla(215 52% 94%);
+    --clr-neutrals-0: hsla(215 24% 14%);
+    --clr-neutrals-100: hsla(216 14% 25%);
+    --clr-neutrals-200: hsla(215 27% 35%);
+    --clr-neutrals-300: hsla(215 48% 60%);
+    --clr-neutrals-500: hsla(215 52% 74%);
     --clr-neutrals-600: hsla(216 100% 98%);
     --clr-neutrals-900: hsla(0 0% 100%);
 
