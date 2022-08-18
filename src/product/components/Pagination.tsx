@@ -1,9 +1,11 @@
 import React from 'react';
 
-interface Props {}
+interface Props {
+  children: React.ReactNode;
+}
 
-const Pagination: React.FC<Props> = () => {
-  return <div>{'<Pagination />'}</div>;
+const Pagination: React.FC<Props> = ({children}) => {
+  return <div>{children}</div>;
 };
 
 export default Pagination;

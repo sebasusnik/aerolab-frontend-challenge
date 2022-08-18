@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 
 import dynamic from 'next/dynamic';
 
+import Footer from './components/Footer';
+
 const Topbar = dynamic(() => import('./components/Topbar'));
 
 const WavesBg = dynamic(() => import('./components/WavesBg'));
@@ -35,6 +37,7 @@ const Layout: React.FC<Props> = ({children}) => {
         <WavesBg />
         {children}
       </main>
+      <Footer />
     </>
   );
 };

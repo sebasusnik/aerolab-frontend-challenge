@@ -33,6 +33,9 @@
       "~layout*": [
         "src/layout*"
       ],
+      "~templates*": [
+        "src/templates*"
+      ],
       "~user*": [
         "src/user*"
       ],

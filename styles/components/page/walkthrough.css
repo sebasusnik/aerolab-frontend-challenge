@@ -8,6 +8,7 @@
   @media (min-width: 78.75rem) {
     top: 1.5em;
     font-size: clamp(.74em, .8vw + .05em, 1em);
+    margin-bottom: 12em;
   }
   & .container {
     justify-content: center;
@@ -70,10 +71,8 @@
 
   transition: bottom .3s, box-shadow .1s;
 
-
   @media (min-width: 48rem) {
     height: 29.8125em;
-    max-width: 21em;
   }
   
   @media (min-width: 78.75rem) {
@@ -121,7 +120,7 @@
         & img {
           top: -1em !important;
           @media (min-width: 48rem) {
-            top: em !important;
+            top: 0em !important;
           }
           &.table {
             inset: auto !important;
@@ -130,7 +129,7 @@
             max-height: unset !important;
             bottom: 0px !important;
             @media (min-width: 48rem) {
-              height: 15.5em !important;
+              height: calc(80% + 2em) !important;
             }
             @media (min-width: 78.75rem) {
               height: 30em !important;

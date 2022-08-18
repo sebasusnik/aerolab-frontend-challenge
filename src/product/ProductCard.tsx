@@ -1,9 +1,13 @@
 import React from 'react';
 
-interface Props {}
+import {Product} from './types';
 
-const ProductCard: React.FC<Props> = () => {
-  return <div>{'<ProductCard />'}</div>;
+interface Props {
+  product: Product;
+}
+
+const ProductCard: React.FC<Props> = ({product}) => {
+  return <div>{product.name}</div>;
 };
 
 export default ProductCard;
