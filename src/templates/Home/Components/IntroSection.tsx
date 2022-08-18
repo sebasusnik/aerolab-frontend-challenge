@@ -21,7 +21,7 @@ const CARDS: ICard[] = [
   },
   {
     title: '3—enjoy!',
-    text: 'All done, you can relax! We&#8217;ll take care of delivery of your tech item!',
+    text: 'All done, you can relax! We’ll take care of delivery of your tech item!',
     icon: 'icons/walkthrough-3.svg',
     image: enjoyImage,
   },
