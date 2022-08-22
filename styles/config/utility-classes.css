@@ -24,9 +24,12 @@
 
 .container {
   padding-inline: 1.25em;
-  max-width: var(--page-width) ;
+  max-width: var(--page-width);
   margin-inline: auto;
   overflow: hidden;
+  @media (max-width: 78.75em) and (min-width: 48rem) {
+    max-width: var(--page-width-tablet);
+  }
 }
 
 .sr-only {
