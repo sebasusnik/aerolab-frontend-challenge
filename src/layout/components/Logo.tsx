@@ -1,8 +1,6 @@
 import React from 'react';
 
-interface Props {}
-
-const Logo: React.FC<Props> = () => {
+const Logo: React.FC = () => {
   return (
     <a
       href="https://aerolab.us/"

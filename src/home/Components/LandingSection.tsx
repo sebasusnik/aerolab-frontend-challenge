@@ -28,7 +28,19 @@ const LandingSection: React.FC = () => {
             }}
           >
             <span className="text-lg accent">VIEW ALL PRODUCTS</span>
-            <img className="cta-arrow icon-md" src="/icons/down-arrow.svg" alt="" />
+            <svg
+              className="cta-arrow icon-md"
+              width="15px"
+              height="18px"
+              viewBox="0 0 15 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.75 11.6L8.5 17.85H6.75L0.5 11.6L2.25 9.825L6.375 13.925V0H8.875V13.925L13 9.8L14.75 11.6Z"
+                fill="white"
+              />
+            </svg>
           </a>
         </div>
         <div className="landing-illustration">

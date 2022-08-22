@@ -1,7 +1,7 @@
 import React from 'react';
 
 const WavesBg: React.FC = () => {
-  const n = 88;
+  const n: number = 88;
 
   return (
     <div className="waves-bg">
@@ -13,8 +13,8 @@ const WavesBg: React.FC = () => {
             strokeWidth="2"
           />
         </defs>
-        {[...Array(n)].map((e, i) => {
-          return <use key={i} xlinkHref="#mypath" y={15 * (i + 1)} x="0" />;
+        {Array.from(Array(n).keys()).map(e => {
+          return <use key={e.toString()} xlinkHref="#mypath" y={15 * (e + 1)} x="0" />;
         })}
       </svg>
     </div>

@@ -36,7 +36,7 @@ const AeroCoin: React.FC<Props> = ({isOpen, points, closeAeroPay, handleClick, c
         ref={aeroCoinRef}
         role="Open aeropay button"
         type="button"
-        className="aerocoin flex"
+        className="aerocoin flex wait"
         onClick={handleClick}
       >
         <div className="aerocoin-content flex">
@@ -45,11 +45,7 @@ const AeroCoin: React.FC<Props> = ({isOpen, points, closeAeroPay, handleClick, c
             <Loader />
           </div>
         </div>
-        <img
-          aria-hidden="true"
-          src="/icons/chevron-active.svg"
-          className="aerocoin-chevron icon-sm"
-        />
+        <img aria-hidden="true" src="/icons/chevron-active.svg" className="aerocoin-chevron" />
       </button>
     );
   }
@@ -73,7 +69,7 @@ const AeroCoin: React.FC<Props> = ({isOpen, points, closeAeroPay, handleClick, c
         <img
           aria-hidden="true"
           src="/icons/chevron-active.svg"
-          className={`aerocoin-chevron icon-sm ${isOpen ? 'active' : ''}`}
+          className={`aerocoin-chevron ${isOpen ? 'active' : ''}`}
         />
       </button>
       {isOpen && children}

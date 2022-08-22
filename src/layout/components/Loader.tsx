@@ -1,8 +1,6 @@
 import React from 'react';
 
-interface Props {}
-
-const Loader: React.FC<Props> = () => {
+const Loader: React.FC = () => {
   return (
     <svg className="spinner" viewBox="0 0 50 50">
       <defs>

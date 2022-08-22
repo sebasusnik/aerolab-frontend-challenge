@@ -61,26 +61,32 @@
       padding: 1.5em;
     }
     @media (max-height: 23.75em) and (orientation: landscape) {
-      height: 80vh;
-      gap: 1em;
+      height: 82vh;
+      gap: 0.75em;
       padding: 1em 1.5em;
     }
     & .aerocard {
+      position: relative;
       flex-direction: column;
       padding: 1em;
       border-radius: 0.5em;
       height: 8.5em;
+      overflow: hidden;
       @media (min-width: 78.75rem){
         height: 9.25em;
       }
-    }
-    & .card-waves {
-      position: absolute;
-      width: 14.875em;
-      height: 8.5em;
-      @media (min-width: 78.75rem) {
-        width: 16.375em;
-        height: 9.25em;
+      & .card-waves {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 14.875em;
+        height: 8.5em;
+        @media (min-width: 78.75rem) {
+          width: 16.375em;
+          height: 9.25em;
+        }
       }
     }
     & .aeropay-amount-cta {
@@ -88,6 +94,9 @@
       gap: 1.5em;
       & .aeropay-amount {
         gap: 0.25em;
+      }
+      & .cta {
+        height: auto;
       }
     }
   }
@@ -108,7 +117,6 @@
   @media (hover: hover) {
     &:hover {
       box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.08);
-      outline: solid 1px var(--clr-neutrals-0);
     }
   }
 }

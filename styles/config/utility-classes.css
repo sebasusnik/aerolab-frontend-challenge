@@ -208,7 +208,7 @@ z-index: 100;
 .icon-sm {
   height: 1.25em;
   width: 1.25em;
-  @media (min-width: 78.75rem) {
+  @media (min-width: 48rem) {
     height: 1.5em;
     width: 1.5em;
   }

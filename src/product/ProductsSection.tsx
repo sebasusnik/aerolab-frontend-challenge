@@ -10,7 +10,7 @@ interface Props {
   products: Product[];
 }
 
-const ProductList: React.FC<Props> = ({products}) => {
+const ProductsSection: React.FC<Props> = ({products}) => {
   return (
     <section id="products" tabIndex={-1} className="products-section container">
       <h2 className="products-heading title-md allcaps">
@@ -25,4 +25,4 @@ const ProductList: React.FC<Props> = ({products}) => {
   );
 };
 
-export default ProductList;
+export default ProductsSection;

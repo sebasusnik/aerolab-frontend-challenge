@@ -2,7 +2,8 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import CTA from './CTA';
 import {ScrollDirection, useScrollDirection} from '~layout/hooks/useScrollDirection';
-import {Amount, ButtonVariants} from '~layout/types';
+import {Amount} from '~layout/types';
+import {useUser} from '~user/hooks';
 
 interface Props {
   points: number;
@@ -14,6 +15,8 @@ const AMOUNTS: Amount[] = [Amount.min, Amount.mid, Amount.max];
 
 const AeroPay: React.FC<Props> = ({closeAeroPay, addPoints, points}) => {
   const [amount, setAmount] = useState<number>(Amount.mid);
+
+  const user = useUser();
 
   const scrollDirection: ScrollDirection = useScrollDirection();
 
@@ -50,11 +53,16 @@ const AeroPay: React.FC<Props> = ({closeAeroPay, addPoints, points}) => {
               <img className="icon-sm" src="/icons/aeropay-2.svg" alt="aerocard logo" />
             </div>
             <div className="flex text-md center">
-              <span>John Kite</span>
-              <span>07/23</span>
+              <span>{user.name}</span>
+              <span>
+                {new Date(user.createDate).toLocaleDateString('es-AR', {
+                  month: '2-digit',
+                  year: '2-digit',
+                })}
+              </span>
             </div>
+            <img src="/card-waves.svg" className="card-waves" alt="" />
           </div>
-          <img src="/card-waves.svg" className="card-waves" alt="" />
           <div role="aropay" className="aeropay-amount-cta flex">
             <div className="aeropay-amount flex stretch" tabIndex={-1}>
               {AMOUNTS.map(a => (
@@ -77,15 +85,12 @@ const AeroPay: React.FC<Props> = ({closeAeroPay, addPoints, points}) => {
                 </button>
               ))}
             </div>
-            <button onClick={() => addPoints(amount)}>
-              <span className="sr-only">{`Now you have ${points} points, press enter to`}</span>
-              <CTA
-                variant={ButtonVariants.Default}
-                left={null}
-                right="Add Points"
-                ariaLabel={`Add ${amount} points.`}
-              />
-            </button>
+            <span className="sr-only">{`Now you have ${points} points, press enter to`}</span>
+            <CTA
+              right="Add Points"
+              ariaLabel={`Add ${amount} points.`}
+              action={() => addPoints(amount)}
+            />
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ export default {
           resolve({
             id: '5a03638052fd231590d04eb5',
             name: 'John Kite',
-            points: 10000,
+            points: 1000,
             redeemHistory: [],
             createDate: 'Wed Nov 08 2017 17:05:20 GMT-0300 (Argentina Standard Time)',
           }),

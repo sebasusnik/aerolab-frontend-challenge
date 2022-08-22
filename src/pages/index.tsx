@@ -2,13 +2,13 @@ import type {NextPage} from 'next';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
+import LandingSection from '~home/Components/LandingSection';
+import WalkthroughSection from '~home/Components/WalkthroughSection';
+import HomePage from '~home/HomePage';
 import api from '~product/api';
 import {Product} from '~product/types';
-import IntroSection from '~templates/Home/Components/IntroSection';
-import LandingSection from '~templates/Home/Components/LandingSection';
-import HomePage from '~templates/Home/HomePage';
 
-const ProductList = dynamic(() => import('~product/ProductsList'));
+const ProductsSection = dynamic(() => import('~product/ProductsSection'));
 
 interface Props {
   products: Product[];
@@ -29,10 +29,10 @@ const Home: NextPage<Props> = ({products}) => {
 
       <HomePage>
         <LandingSection />
-        <IntroSection />
+        <WalkthroughSection />
       </HomePage>
 
-      <ProductList products={products} />
+      <ProductsSection products={products} />
     </>
   );
 };

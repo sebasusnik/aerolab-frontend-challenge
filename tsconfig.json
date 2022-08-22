@@ -6,6 +6,8 @@
       "dom.iterable",
       "esnext"
     ],
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
 /*     "typeRoots": ["./custom.d.ts"], */
     "allowJs": false,
     "skipLibCheck": true,
@@ -33,8 +35,8 @@
       "~layout*": [
         "src/layout*"
       ],
-      "~templates*": [
-        "src/templates*"
+      "~home*": [
+        "src/home*"
       ],
       "~user*": [
         "src/user*"

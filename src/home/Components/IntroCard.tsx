@@ -6,7 +6,6 @@ import {ICard} from '../types';
 
 interface Props {
   card: ICard;
-  key: number;
 }
 
 const IntroCard: React.FC<Props> = ({card}) => {
@@ -27,6 +26,7 @@ const IntroCard: React.FC<Props> = ({card}) => {
         <div className="intro-card-image-holder">
           <Image
             src={card.image}
+            className={card.className}
             layout="fill"
             objectFit="contain"
             quality={80}

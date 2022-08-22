@@ -9,6 +9,9 @@
 
 /* =========== COMPONENTS =========== */
 
+
+/* =========== LAYOUT =========== */
+
 @import './components/layout/waves-bg.css';
 @import './components/layout/topbar.css';
 @import './components/layout/logo.css';
@@ -17,7 +20,16 @@
 @import './components/layout/cta.css';
 @import './components/layout/loader.css';
 
-@import './components/page/landing.css';
-@import './components/page/walkthrough.css';
 
+/* =========== HOME =========== */
+
+@import './components/home/landing.css';
+@import './components/home/walkthrough.css';
+@import './components/home/intro-card.css';
+
+
+/* =========== PRODUCT =========== */
+
+@import './components/product/products-grid.css';
+@import './components/product/product-card.css';
 

@@ -69,6 +69,9 @@
       }
       & .cta-arrow {
         width: 0.75em;
+        & path {
+          fill: var(--clr-neutrals-0);
+        }
         @media (min-width: 78.75rem) {
           width: max(0.75rem, 0.95em);
         }
