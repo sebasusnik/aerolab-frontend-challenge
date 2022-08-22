@@ -10,6 +10,6 @@
   @media (min-width: 78.75rem) {
     grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
     grid-auto-rows: 32em;
-    font-size: clamp(.75em, .8vw + .05em, 1em);
+    font-size: clamp(.8em, .8vw + .1em, 1em);
   }
 }
