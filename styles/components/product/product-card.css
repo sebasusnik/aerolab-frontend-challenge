@@ -4,7 +4,7 @@
 
   & .product-card {
     flex-direction: column-reverse;
-    height: 26.9375em;
+    height: 100%;
     filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.08));
 
     & .product-image-holder {
@@ -16,7 +16,7 @@
     & .product-card-header {
       border: 1px solid var(--clr-neutrals-300);
       border-top: none;
-      padding: 16px 24px 24px;
+      padding: 1em 1.5em 1.5em;
       border-radius: 0 0 1em 1em;
     }
       

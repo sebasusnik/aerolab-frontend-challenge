@@ -13,17 +13,6 @@
   background-size: 107.5% 100%;
   background-position: right;
   cursor: pointer;
-  @media (min-width: 48rem) {
-    height: 3.6875em;
-  }
-  &.processing {
-    background: var(--clr-processing);
-    cursor: progress;
-  }
-  &.disable {
-    background: var(--clr-neutrals-200);
-    cursor: not-allowed;
-  }
   @media (hover: hover) {
     &:hover {
       background-position: left;
@@ -37,5 +26,17 @@
       background-position: left;
       box-shadow: 0 0.125em 0.75em rgba(0, 0, 0, 0.1);
     }
+  }
+  @media (min-width: 48rem) {
+    height: 3.6875em;
+  }
+  &.processing {
+    background: var(--clr-processing);
+    cursor: progress;
+  }
+  &.disable {
+    background: var(--clr-neutrals-200);
+    cursor: not-allowed;
+    box-shadow: unset;
   }
 }
