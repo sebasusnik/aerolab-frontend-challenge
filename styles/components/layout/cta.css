@@ -13,6 +13,9 @@
   background-size: 107.5% 100%;
   background-position: right;
   cursor: pointer;
+  & span {
+    font-size: 1rem
+  }
   @media (hover: hover) {
     &:hover {
       background-position: left;
@@ -29,6 +32,11 @@
   }
   @media (min-width: 48rem) {
     height: 3.6875rem;
+  }
+  @media (min-width: 78.75rem) {
+    & span {
+      font-size: max(1rem, 1.125em)
+    }
   }
   &.processing {
     background: var(--clr-processing);
