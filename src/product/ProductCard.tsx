@@ -19,45 +19,51 @@ const ProductCard: React.FC<Props> = ({product}) => {
 
   return (
     <div className="product-card-wrapper flex">
-      {points ? (
-        <CTA
-          variant={product.cost < points ? ButtonVariants.Default : ButtonVariants.Disable}
-          left={product.cost < points ? 'Redeem for' : 'You need'}
-          right={product.cost}
-          action={() => console.log('hehe')}
-        />
-      ) : (
-        <CTA variant={ButtonVariants.Processing} />
-      )}
+      <div
+        onClick={e => {
+          e.stopPropagation();
+        }}
+      >
+        {points ? (
+          <CTA
+            variant={product.cost < points ? ButtonVariants.Default : ButtonVariants.Disable}
+            left={product.cost < points ? 'Redeem for' : 'You need'}
+            right={product.cost}
+            action={() => console.log('hehe')}
+          />
+        ) : (
+          <CTA variant={ButtonVariants.Skeleton} />
+        )}
+      </div>
       <div className="product-card flex">
         <div className="product-card-header">
           <h3 className="text-lg">{product.name}</h3>
           <p className="text-md allcaps secondary">{product.category}</p>
         </div>
-        <div className="product-card-image-wrapper">
+        <div className="product-card-image-box flex">
           {isImageLoading && (
-            <div className="product-card-image-placeholder">
-              <Image
-                src={imagePlaceholder}
-                alt={'loading image'}
-                height={72}
-                objectFit={'cover'}
-                width={78}
-                className={'product-card-image'}
-              />
-            </div>
-          )}
-          <div className="product-card-image-holder">
             <Image
-              src={product.img.hdUrl}
-              alt=""
-              width={504}
-              layout="fill"
-              objectFit="contain"
-              className="product-card-image"
-              onLoadingComplete={() => setIsImageLoading(true)}
+              src={imagePlaceholder}
+              alt={'loading image'}
+              height={72}
+              objectFit={'cover'}
+              width={78}
+              className="product-card-image-placeholder"
             />
-          </div>
+          )}
+          <Image
+            src={product.img.hdUrl}
+            alt=""
+            layout="fill"
+            objectFit="contain"
+            className="product-card-image"
+            onLoadingComplete={() => setIsImageLoading(false)}
+          />
+          {/*           <img
+            src={product.img.hdUrl}
+            alt={`${product.category} product ${product.name}`}
+            className="product-card-zoom"
+          /> */}
         </div>
       </div>
     </div>

@@ -4,7 +4,6 @@
   grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
   margin-bottom: 4em;
   @media (min-width: 48rem) {
-    grid-auto-rows: 30em;
     font-size: clamp(.75em, 1.4vw + .05em, 1em);
   }
   @media (min-width: 78.75rem) {

@@ -2,6 +2,7 @@ export enum ButtonVariants {
   Default = 'Default',
   Disable = 'Disable',
   Processing = 'Processing...',
+  Skeleton = 'Skeleton',
 }
 
 export enum Amount {

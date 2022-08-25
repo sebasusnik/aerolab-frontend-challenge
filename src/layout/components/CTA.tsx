@@ -33,6 +33,15 @@ const CTA: React.FC<Props> = ({variant, left, right, ariaLabel, action}) => {
       </button>
     );
 
+  if (variant === ButtonVariants.Skeleton)
+    return (
+      <button aria-hidden="true" className="cta skeleton">
+        <div>
+          <span className="text-lg accent" />
+        </div>
+      </button>
+    );
+
   return (
     <button aria-label={ariaLabel} className="cta" onClick={action}>
       {left && <span className="text-lg accent">{left}</span>}
