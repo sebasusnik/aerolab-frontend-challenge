@@ -16,7 +16,7 @@
   background-color: var(--clr-neutrals-0);
   border-radius: 1em;
   box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.08);
-  transition: top 0.45s ease-out;
+  transition: top 0.2s ease-out;
   &.top{
     top: 2.75em;
     @media (min-width: 78.75rem) {

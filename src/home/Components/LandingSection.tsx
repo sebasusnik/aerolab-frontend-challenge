@@ -46,12 +46,12 @@ const LandingSection: React.FC = () => {
         <div className="landing-illustration">
           {/*    image optimized    */}
           <Image
-            priority
             src={heroImage}
             layout="fill"
             objectFit="scale-down"
             quality={100}
             alt="Futuristic guy playing with a VR"
+            className="noselect"
           />
         </div>
       </div>

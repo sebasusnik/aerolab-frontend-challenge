@@ -20,9 +20,6 @@
         & .product-card-image {
           position: relative!important;
           padding: 1em!important;
-          -moz-user-select: none!important;
-          -webkit-user-select: none!important;
-          user-select: none!important;
         }
         & .product-card-image-placeholder {
 

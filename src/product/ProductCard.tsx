@@ -46,7 +46,7 @@ const ProductCard: React.FC<Props> = ({product}) => {
               src={imagePlaceholder}
               alt={'loading image'}
               height={72}
-              objectFit={'cover'}
+              layout="fixed"
               width={78}
               className="product-card-image-placeholder"
             />
@@ -56,7 +56,7 @@ const ProductCard: React.FC<Props> = ({product}) => {
             alt=""
             layout="fill"
             objectFit="contain"
-            className="product-card-image"
+            className="product-card-image noselect"
             onLoadingComplete={() => setIsImageLoading(false)}
           />
           {/*           <img

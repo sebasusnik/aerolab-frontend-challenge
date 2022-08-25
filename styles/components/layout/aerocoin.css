@@ -33,6 +33,8 @@
     }
   }
   & .aerocoin-chevron {
+    height: 1.5em;
+    width: 1.5em;
     transform: rotate(0.25turn);
     transition: transform 0.3s;
     &.active {

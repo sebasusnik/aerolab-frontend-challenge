@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  transition: top 0.45s ease-out;
+  transition: top 0.19s ease-out;
   @media (min-width: 48rem) {
     padding-inline: 1.25em;
   }

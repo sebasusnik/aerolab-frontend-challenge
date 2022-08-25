@@ -17,7 +17,7 @@ const defaultProps: Props = {
 const CTA: React.FC<Props> = ({variant, left, right, ariaLabel, action}) => {
   if (variant === ButtonVariants.Disable)
     return (
-      <button aria-hidden="true" className="cta disable">
+      <button className="cta disable">
         {left && <span className="text-lg secondary">{left}</span>}
         <img className="icon-sm" src="/icons/aeropay-disable.svg" alt="" />
         {right && <span className="text-lg secondary">{right}</span>}
@@ -26,7 +26,7 @@ const CTA: React.FC<Props> = ({variant, left, right, ariaLabel, action}) => {
 
   if (variant === ButtonVariants.Processing)
     return (
-      <button aria-hidden="true" className="cta processing">
+      <button className="cta processing">
         <div>
           <span className="text-lg accent">{variant}</span>
         </div>
@@ -35,7 +35,7 @@ const CTA: React.FC<Props> = ({variant, left, right, ariaLabel, action}) => {
 
   if (variant === ButtonVariants.Skeleton)
     return (
-      <button aria-hidden="true" className="cta skeleton">
+      <button className="cta skeleton">
         <div>
           <span className="text-lg accent" />
         </div>

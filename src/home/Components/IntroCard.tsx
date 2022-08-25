@@ -23,7 +23,7 @@ const IntroCard: React.FC<Props> = ({card}) => {
             <p className="text-lg secondary">{card.text}</p>
           </div>
         </div>
-        <div className="intro-card-image-holder">
+        <div className="intro-card-image-holder noselect">
           <Image
             src={card.image}
             className={card.className}
