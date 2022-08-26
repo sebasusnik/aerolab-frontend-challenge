@@ -5,6 +5,10 @@ import {IUserContext, User, UserStatus} from './types';
 import productApi from '~product/api';
 import {Product} from '~product/types';
 
+interface Props {
+  children: React.ReactNode;
+}
+
 const INITIAL_USER = {
   id: '',
   name: '',
@@ -12,10 +16,6 @@ const INITIAL_USER = {
   redeemHistory: [],
   createDate: '',
 };
-
-interface Props {
-  children: React.ReactNode;
-}
 
 const UserContext = createContext({} as IUserContext);
 
