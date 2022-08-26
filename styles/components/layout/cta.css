@@ -50,7 +50,7 @@
   &.skeleton {
     background: var(--clr-neutrals-200);
     box-shadow: unset;
-    animation: pulsation 0.62s ease-out infinite alternate-reverse;
+    animation: pulsation 0.62s ease-in infinite alternate-reverse;
   }
 }
 @keyframes pulsation {
