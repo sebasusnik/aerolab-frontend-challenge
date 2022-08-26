@@ -18,6 +18,7 @@
         align-items: center;
         justify-content: center;
         & .product-card-image {
+          pointer-events: none;
           position: relative!important;
           padding: 1em!important;
         }

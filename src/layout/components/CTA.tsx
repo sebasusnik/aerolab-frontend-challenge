@@ -18,9 +18,9 @@ const CTA: React.FC<Props> = ({variant, left, right, ariaLabel, action}) => {
   if (variant === ButtonVariants.Disable)
     return (
       <button className="cta disable">
-        {left && <span className="text-lg secondary">{left}</span>}
+        {left && <span className="text-lg secondary noselect">{left}</span>}
         <img className="icon-sm" src="/icons/aeropay-disable.svg" alt="" />
-        {right && <span className="text-lg secondary">{right}</span>}
+        {right && <span className="text-lg secondary noselect">{right}</span>}
       </button>
     );
 
@@ -28,7 +28,7 @@ const CTA: React.FC<Props> = ({variant, left, right, ariaLabel, action}) => {
     return (
       <button className="cta processing">
         <div>
-          <span className="text-lg accent">{variant}</span>
+          <span className="text-lg accent noselect">{variant}</span>
         </div>
       </button>
     );
@@ -37,16 +37,16 @@ const CTA: React.FC<Props> = ({variant, left, right, ariaLabel, action}) => {
     return (
       <button className="cta skeleton">
         <div>
-          <span className="text-lg accent" />
+          <span className="text-lg accent noselect" />
         </div>
       </button>
     );
 
   return (
     <button aria-label={ariaLabel} className="cta" onClick={action}>
-      {left && <span className="text-lg accent">{left}</span>}
+      {left && <span className="text-lg accent noselect">{left}</span>}
       <img className="icon-sm" src="/icons/aeropay-3.svg" alt="" />
-      {right && <span className="text-lg accent">{right}</span>}
+      {right && <span className="text-lg accent noselect">{right}</span>}
     </button>
   );
 };

@@ -50,7 +50,7 @@ const AeroPay: React.FC<Props> = ({closeAeroPay, addPoints, points}) => {
           <div className="aerocard clr-100 bg-900 flex elevation" aria-label="credit card">
             <div className="flex center">
               <span className="text-lg">Aerocard</span>
-              <img className="icon-sm" src="/icons/aeropay-2.svg" alt="aerocard logo" />
+              <img className="icon-sm noselect" src="/icons/aeropay-2.svg" alt="aerocard logo" />
             </div>
             <div className="flex text-md center">
               <span>{user.name}</span>
@@ -61,7 +61,7 @@ const AeroPay: React.FC<Props> = ({closeAeroPay, addPoints, points}) => {
                 })}
               </span>
             </div>
-            <img src="/card-waves.svg" className="card-waves" alt="" />
+            <img src="/card-waves.svg" className="card-waves noselect" alt="" />
           </div>
           <div role="aropay" className="aeropay-amount-cta flex">
             <div className="aeropay-amount flex stretch" tabIndex={-1}>

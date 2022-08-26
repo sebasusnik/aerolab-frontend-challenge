@@ -9,14 +9,14 @@ const LandingSection: React.FC = () => {
     <section className="container">
       <div className="landing flex">
         <div className="landing-content flex">
-          <h1 role="heading" aria-level={1} className="landing-heading flex">
+          <h1 role="heading" aria-level={1} className="landing-heading flex noselect">
             <span className="text-lg allcaps secondary">Explore the</span>
             <span className="landing-title title-lg allcaps">
               <span className="brand">tech</span> <br />
               <span>zone</span>
             </span>
           </h1>
-          <p role="heading" aria-level={2} className="text-lg secondary">
+          <p role="heading" aria-level={2} className="text-lg secondary noselect">
             Here you&#8217;ll be able to exchange all of your hard-earned Aeropoints and exchange
             them for cool tech.
           </p>
@@ -27,7 +27,7 @@ const LandingSection: React.FC = () => {
               e.stopPropagation();
             }}
           >
-            <span className="text-lg accent">VIEW ALL PRODUCTS</span>
+            <span className="text-lg accent noselect">VIEW ALL PRODUCTS</span>
             <svg
               className="cta-arrow icon-md"
               width="15px"

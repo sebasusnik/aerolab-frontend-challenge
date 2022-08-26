@@ -96,6 +96,7 @@
       overflow: visible !important; /* overwrites next/image component styles for this case */
     }
     & img {
+      pointer-events: none;
       top: max(16.2em, -20vw + 22em) !important;
       transform: scale(1.6);
       transform-origin: bottom;

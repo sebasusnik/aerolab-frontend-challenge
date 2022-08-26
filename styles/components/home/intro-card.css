@@ -59,6 +59,7 @@
       & span {
         bottom: -2px !important;
         & img {
+          pointer-events: none;
           top: -1em !important;
           @media (min-width: 48rem) {
             top: 0em !important;

@@ -59,7 +59,7 @@ const AeroCoin: React.FC<Props> = ({isOpen, points, closeAeroPay, handleClick, c
         onClick={handleClick}
       >
         <div className="aerocoin-content flex">
-          <img className="icon-md" aria-hidden="true" src="/icons/aeropay-1.svg" />
+          <img className="icon-md noselect" aria-hidden="true" src="/icons/aeropay-1.svg" />
           <span className="sr-only">You have</span>
           <span className="text-lg brand">
             {isDesktop ? points.toLocaleString('es-AR') : points}
@@ -69,7 +69,7 @@ const AeroCoin: React.FC<Props> = ({isOpen, points, closeAeroPay, handleClick, c
         <img
           aria-hidden="true"
           src="/icons/chevron-active.svg"
-          className={`aerocoin-chevron ${isOpen ? 'active' : ''}`}
+          className={`aerocoin-chevron noselect ${isOpen ? 'active' : ''}`}
         />
       </button>
       {isOpen && children}

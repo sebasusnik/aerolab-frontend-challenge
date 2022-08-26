@@ -13,7 +13,7 @@ interface Props {
 const ProductsSection: React.FC<Props> = ({products}) => {
   return (
     <section id="products" tabIndex={-1} className="products-section container">
-      <h2 className="products-heading title-md allcaps">
+      <h2 className="products-heading title-md allcaps noselect">
         <span className="brand">Tech</span> <span>Products</span>
       </h2>
       <Filter />
