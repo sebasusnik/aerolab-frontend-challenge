@@ -11,6 +11,5 @@ module.exports = {
         stage: 1,
       },
     ],
-    'cssnano',
   ],
 };
