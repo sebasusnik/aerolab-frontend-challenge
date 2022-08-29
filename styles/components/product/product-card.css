@@ -20,7 +20,7 @@
         & .product-card-image {
           pointer-events: none;
           position: relative!important;
-          padding: 1em!important;
+          padding: 1rem!important;
         }
         & .product-card-image-placeholder {
 

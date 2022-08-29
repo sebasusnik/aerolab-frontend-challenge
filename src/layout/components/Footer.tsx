@@ -1,8 +1,6 @@
 import React from 'react';
 
-interface Props {}
-
-const Footer: React.FC<Props> = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="footer flex">
       <a

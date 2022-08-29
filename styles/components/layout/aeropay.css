@@ -76,6 +76,7 @@
         height: 9.25em;
       }
       & .card-waves {
+        pointer-events: none;
         position: absolute;
         top: 0;
         bottom: 0;

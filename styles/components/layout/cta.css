@@ -31,7 +31,8 @@
     }
   }
   @media (min-width: 48rem) {
-    height: 3.6875rem;
+    height: 3.6875em;
+    min-height: 3.5rem;
   }
   @media (min-width: 78.75rem) {
     & span {

@@ -120,8 +120,7 @@
             align-items: center;
             max-width: 100%;
             & .icon-lg {
-              height: 2.5rem;
-              width: 2.5rem;
+              height: 100%;
             }
           }
         }

@@ -1,17 +1,19 @@
 .footer {
   justify-content: center;
   align-items: center;
-  height: 7.5em;
+  height: 7.5rem;
   @media (min-width: 78.75rem) {
-    height: 12.5em;
+    height: 12.5rem;
   }
   & .github-link {
     justify-content: center;
     align-items: center;
     gap: 0.5em;
-
     & svg path {
       fill: var(--clr-neutrals-600);
+    }
+    & .text-lg {
+      font-size: 1.125rem;
     }
     &:hover {
       & svg path {
