@@ -5,7 +5,7 @@ import {ButtonVariants} from '~layout/types';
 interface Props {
   variant?: ButtonVariants;
   left?: string;
-  right?: string | number;
+  right?: string;
   ariaLabel?: string;
   action?: () => void;
 }
@@ -15,6 +15,10 @@ const defaultProps: Props = {
 };
 
 const CTA: React.FC<Props> = ({variant, left, right, ariaLabel, action}) => {
+  const isNumeric = (val: string): boolean => {
+    return !isNaN(Number(val));
+  };
+
   if (variant === ButtonVariants.Disable)
     return (
       <button className="cta disable">
@@ -46,7 +50,9 @@ const CTA: React.FC<Props> = ({variant, left, right, ariaLabel, action}) => {
     <button aria-label={ariaLabel} className="cta" onClick={action}>
       {left && <span className="text-lg accent noselect">{left}</span>}
       <img className="icon-sm" src="/icons/aeropay-3.svg" alt="" />
-      {right && <span className="text-lg accent noselect">{right}</span>}
+      {right && (
+        <span className={`text-lg accent ${isNumeric(right) ? '' : 'noselect'}`}>{right}</span>
+      )}
     </button>
   );
 };

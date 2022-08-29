@@ -28,7 +28,7 @@ const ProductCard: React.FC<Props> = ({product}) => {
           <CTA
             variant={product.cost < points ? ButtonVariants.Default : ButtonVariants.Disable}
             left={product.cost < points ? 'Redeem for' : 'You need'}
-            right={product.cost}
+            right={product.cost.toString()}
             action={() => console.log('hehe')}
           />
         ) : (

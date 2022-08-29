@@ -1,9 +1,9 @@
 .footer {
   justify-content: center;
   align-items: center;
-  height: 7.5rem;
+  height: 7.5em;
   @media (min-width: 78.75rem) {
-    height: 12.5rem;
+    height: 12.5em;
   }
   & .github-link {
     justify-content: center;
@@ -15,15 +15,30 @@
     & .text-lg {
       font-size: 1.125rem;
     }
-    &:hover {
-      & svg path {
-        fill: url(#paint0_linear_497_3780);
+    @media (hover: hover) {
+      &:hover {
+        & svg path {
+          fill: url(#paint0_linear_497_3780);
+        }
+        & .secondary {
+          background: var(--clr-brand-default);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
       }
-      & .secondary {
-        background: var(--clr-brand-default);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+    }
+    @media (hover: none) {
+      &:active {
+        & svg path {
+          fill: url(#paint0_linear_497_3780);
+        }
+        & .secondary {
+          background: var(--clr-brand-default);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
       }
     }
   }
