@@ -97,7 +97,8 @@
         gap: 0.25em;
       }
       & .cta {
-        height: auto;
+        height: 3.1875em;
+        min-height: initial;
       }
     }
   }
