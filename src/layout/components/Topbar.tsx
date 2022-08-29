@@ -7,9 +7,7 @@ import Logo from './Logo';
 import SkipToContent from './SkipToContent';
 import {ScrollDirection, useScrollDirection} from '~layout/hooks/useScrollDirection';
 import {usePoints} from '~user/hooks';
-const Aeropay = dynamic(() => import('./AeroPay'), {
-  ssr: false,
-});
+const Aeropay = dynamic(() => import('./AeroPay'));
 
 interface Props {
   closeAeroPay: () => void;
