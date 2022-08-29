@@ -1,0 +1,28 @@
+.footer {
+  justify-content: center;
+  align-items: center;
+  height: 7.5em;
+  @media (min-width: 78.75rem) {
+    height: 12.5em;
+  }
+  & .github-link {
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+
+    & svg path {
+      fill: var(--clr-neutrals-600);
+    }
+    &:hover {
+      & svg path {
+        fill: url(#paint0_linear_497_3780);
+      }
+      & .secondary {
+        background: var(--clr-brand-default);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+  }
+}
