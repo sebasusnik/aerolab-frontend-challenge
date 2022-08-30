@@ -21,7 +21,7 @@
           fill: url(#paint0_linear_497_3780);
         }
         & .secondary {
-          background: var(--clr-brand-default);
+          background-image: var(--clr-brand-default);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -34,7 +34,7 @@
           fill: url(#paint0_linear_497_3780);
         }
         & .secondary {
-          background: var(--clr-brand-default);
+          background-image: var(--clr-brand-default);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;

@@ -4,7 +4,7 @@
   position: relative;
   bottom: 0;
   
-  background: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid var(--clr-neutrals-300);
   
   box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.05);
@@ -17,7 +17,7 @@
   }
   
   @media (min-width: 78.75rem) {
-    background: var(--clr-neutrals-0);
+    background-color: var(--clr-neutrals-0);
 
     z-index: 20;
     min-width: 33.25em;
@@ -89,7 +89,7 @@
       padding: 1em 1.5em 1.5em;
       gap: 1em;
     
-      background: var(--clr-neutrals-0);
+      background-color: var(--clr-neutrals-0);
       /* Neutrals/300 */
 
       border-radius: 0 0 1.5rem 1.5rem;
@@ -102,7 +102,7 @@
           white-space: nowrap;
         }
         & .intro-card-icon-box {
-          background: var(--clr-brand-light);
+          background-color: var(--clr-brand-light);
           border-radius: .5rem;
           padding: .25rem;
           max-width: 2.5rem;

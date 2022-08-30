@@ -161,7 +161,7 @@ z-index: 100;
 }
 
 .brand {
-  background: var(--clr-brand-default);
+  background-image: var(--clr-brand-default);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

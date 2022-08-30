@@ -27,7 +27,7 @@
     }
   }
   & .walkthrough-bg {
-    background: var(--clr-section-bg);
+    background-image: var(--clr-section-bg);
     position: absolute;
     z-index: -1;
     left: 0;

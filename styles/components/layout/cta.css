@@ -8,31 +8,27 @@
   height: 3.5rem;
 
   border-radius: 1em;
-  background: var(--clr-brand-default);
-  transition: box-shadow 0.1s, background-position 0.2s;
-  background-size: 107.5% 100%;
-  background-position: right;
+  background-image: var(--clr-brand-default);
+  transition: background-image 0.1s, box-shadow 0.1s;
   cursor: pointer;
   & span {
     font-size: 1rem
   }
   @media (hover: hover) {
     &:hover {
-      background-position: left;
+      background-image: var(--clr-brand-hover);
       box-shadow: 0 0.125em 0.75em rgba(0, 0, 0, 0.1);
     }
   }
   @media (hover: none) {
-    background-size: 120% 100%;
-    transition: background-position 0.5s;
     &:active {
-      background-position: left;
+      background-image: var(--clr-brand-hover);
       box-shadow: 0 0.125em 0.75em rgba(0, 0, 0, 0.1);
     }
   }
   @media (min-width: 48rem) {
     height: 3.6875em;
-    min-height: 3.5rem;
+    min-height: 3.4rem;
   }
   @media (min-width: 78.75rem) {
     & span {
@@ -40,7 +36,7 @@
     }
   }
   &.processing {
-    background: var(--clr-processing);
+    background-image: var(--clr-processing);
     cursor: progress;
   }
   &.disable {
@@ -55,6 +51,6 @@
   }
 }
 @keyframes pulsation {
-  from { background: var(--clr-neutrals-200) } 
-  to { background: var(--clr-neutrals-400) } 
+  from { background-color: var(--clr-neutrals-200) } 
+  to { background-color: var(--clr-neutrals-400) } 
 }
