@@ -23,7 +23,7 @@
       gap: .5rem;
       flex-direction: row;
       max-width: var(--page-width);
-      font-size: clamp(.7em, 1.2vw + 0.25em, 1em);
+      font-size: clamp(.7em, 1.2vw + 0.18em, 1em);
     }
   }
   & .walkthrough-bg {
