@@ -13,7 +13,7 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({children}) => {
-  const [animation, setAnimation] = useState<'open' | 'close'>('open');
+  const [animation, setAnimation] = useState<'open' | 'close'>('close');
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const openAeroPay = () => {
