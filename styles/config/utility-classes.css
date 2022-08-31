@@ -27,7 +27,7 @@
   max-width: var(--page-width);
   margin-inline: auto;
   overflow: hidden;
-  @media (max-width: 78.75rem) and (min-width: 48rem) {
+  @media (max-width: 78.74rem) {
     max-width: var(--page-width-tablet);
   }
 }

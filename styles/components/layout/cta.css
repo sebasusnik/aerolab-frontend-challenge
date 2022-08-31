@@ -45,6 +45,7 @@
     box-shadow: unset;
   }
   &.skeleton {
+    cursor: wait;
     background: var(--clr-neutrals-200);
     box-shadow: unset;
     animation: pulsation 0.62s ease-in infinite alternate-reverse;
