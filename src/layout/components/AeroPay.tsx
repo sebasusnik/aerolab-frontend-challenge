@@ -9,11 +9,12 @@ interface Props {
   points: number;
   closeAeroPay: () => void;
   addPoints: (amount: number) => Promise<void>;
+  animation: string;
 }
 
 const AMOUNTS: Amount[] = [Amount.min, Amount.mid, Amount.max];
 
-const AeroPay: React.FC<Props> = ({closeAeroPay, addPoints, points}) => {
+const AeroPay: React.FC<Props> = ({closeAeroPay, addPoints, points, animation}) => {
   const [amount, setAmount] = useState<number>(Amount.mid);
 
   const user = useUser();
@@ -29,7 +30,7 @@ const AeroPay: React.FC<Props> = ({closeAeroPay, addPoints, points}) => {
   return (
     <div className="aeropay-wrapper">
       <div
-        className={`aeropay ${scrollDirection === ScrollDirection.down ? 'top' : ''}`}
+        className={`aeropay ${scrollDirection === ScrollDirection.down ? 'top' : ''} ${animation}`}
         onClick={e => {
           e.stopPropagation();
         }}

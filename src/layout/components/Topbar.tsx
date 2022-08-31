@@ -11,11 +11,12 @@ const Aeropay = dynamic(() => import('./AeroPay'));
 
 interface Props {
   closeAeroPay: () => void;
-  handleClick: () => void;
+  openAeroPay: () => void;
   isOpen: boolean;
+  animation: string;
 }
 
-const Navbar: React.FC<Props> = ({closeAeroPay, handleClick, isOpen}) => {
+const Navbar: React.FC<Props> = ({closeAeroPay, openAeroPay, isOpen, animation}) => {
   // When scroll direction is down, topbar hides
   const scrollDirection: ScrollDirection = useScrollDirection();
 
@@ -25,7 +26,7 @@ const Navbar: React.FC<Props> = ({closeAeroPay, handleClick, isOpen}) => {
     <div
       className={`topbar ${scrollDirection === ScrollDirection.down ? 'occult' : ''} bg-blured`}
       onClick={() => {
-        !!isOpen && handleClick();
+        !!isOpen && closeAeroPay();
       }}
     >
       <div className="container">
@@ -33,12 +34,18 @@ const Navbar: React.FC<Props> = ({closeAeroPay, handleClick, isOpen}) => {
         <div className="topbar-content flex">
           <Logo />
           <AeroCoin
+            animation={animation}
             isOpen={isOpen}
             closeAeroPay={closeAeroPay}
-            handleClick={handleClick}
+            openAeroPay={openAeroPay}
             points={points}
           >
-            <Aeropay closeAeroPay={closeAeroPay} addPoints={addPoints} points={points} />
+            <Aeropay
+              animation={animation}
+              closeAeroPay={closeAeroPay}
+              addPoints={addPoints}
+              points={points}
+            />
           </AeroCoin>
         </div>
       </div>

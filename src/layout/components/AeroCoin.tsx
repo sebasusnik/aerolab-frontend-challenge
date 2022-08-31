@@ -7,14 +7,22 @@ import {useUser, useUserStatus} from '~user/hooks';
 import {UserStatus} from '~user/types';
 
 interface Props {
+  animation: string;
   isOpen: boolean;
   points: number;
   closeAeroPay: () => void;
-  handleClick: () => void;
+  openAeroPay: () => void;
   children: React.ReactNode;
 }
 
-const AeroCoin: React.FC<Props> = ({isOpen, points, closeAeroPay, handleClick, children}) => {
+const AeroCoin: React.FC<Props> = ({
+  isOpen,
+  points,
+  closeAeroPay,
+  openAeroPay,
+  animation,
+  children,
+}) => {
   const aeroCoinRef = useRef<HTMLButtonElement | null>(null);
   const pressed = usePressObserver({watchKey: 'Escape'});
 
@@ -37,7 +45,6 @@ const AeroCoin: React.FC<Props> = ({isOpen, points, closeAeroPay, handleClick, c
         role="Open aeropay button"
         type="button"
         className="aerocoin flex wait"
-        onClick={handleClick}
       >
         <div className="aerocoin-content flex">
           <img className="icon-md" aria-hidden="true" src="/icons/aeropay-1.svg" />
@@ -56,7 +63,7 @@ const AeroCoin: React.FC<Props> = ({isOpen, points, closeAeroPay, handleClick, c
         ref={aeroCoinRef}
         type="button"
         className={`aerocoin flex ${isOpen ? 'active' : ''}`}
-        onClick={handleClick}
+        onClick={openAeroPay}
       >
         <div className="aerocoin-content flex">
           <img className="icon-md noselect" aria-hidden="true" src="/icons/aeropay-1.svg" />
@@ -69,7 +76,7 @@ const AeroCoin: React.FC<Props> = ({isOpen, points, closeAeroPay, handleClick, c
         <img
           aria-hidden="true"
           src="/icons/chevron-active.svg"
-          className={`aerocoin-chevron noselect ${isOpen ? 'active' : ''}`}
+          className={`aerocoin-chevron noselect ${animation}`}
         />
       </button>
       {isOpen && children}

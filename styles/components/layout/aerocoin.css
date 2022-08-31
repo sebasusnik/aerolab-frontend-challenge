@@ -37,7 +37,7 @@
     width: 1.5em;
     transform: rotate(0.25turn);
     transition: transform 0.3s;
-    &.active {
+    &.open {
       transform: rotate(0.75turn);
     }
   }

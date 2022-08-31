@@ -1,0 +1,18 @@
+.number-selector {
+  background-color: var(--clr-brand-light);
+  justify-content: center;
+  align-items: center;
+  padding: 0.25em;
+  width: 100%;
+  border-radius: 0.75em;
+  cursor: pointer;
+  &.active {
+    background-image: var(--clr-brand-default);
+  }
+  transition: box-shadow 0.1s;
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.08);
+    }
+  }
+}

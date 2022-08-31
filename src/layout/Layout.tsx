@@ -13,25 +13,34 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({children}) => {
+  const [animation, setAnimation] = useState<'open' | 'close'>('open');
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const handleClick = () => {
-    setIsOpen(!isOpen);
+  const openAeroPay = () => {
+    setAnimation('open');
+    setIsOpen(true); // this function toggles the isOpen state
   };
 
-  const closeAeropay = () => {
-    setIsOpen(false);
+  const closeAeroPay = async () => {
+    setAnimation('close');
+    await new Promise(resolve => setTimeout(resolve, 150));
+    setIsOpen(false); // this function set isOpen to false
   };
 
   return (
     <>
       <header>
-        <Topbar handleClick={handleClick} isOpen={isOpen} closeAeroPay={closeAeropay} />
+        <Topbar
+          openAeroPay={openAeroPay}
+          isOpen={isOpen}
+          closeAeroPay={closeAeroPay}
+          animation={animation}
+        />
         <div className="top-bar-spacer" />
       </header>
       <main
         onClick={() => {
-          !!isOpen && setIsOpen(false);
+          !!isOpen && closeAeroPay();
         }}
       >
         <WavesBg />

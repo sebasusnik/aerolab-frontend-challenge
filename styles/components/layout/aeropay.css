@@ -18,9 +18,7 @@
   box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.08);
   transition: top 0.2s ease-out;
 
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
-      animation-name: flipInX;
+
 
 
   &.top{
@@ -108,35 +106,27 @@
       }
     }
   }
-}
 
-.number-selector {
-  background-color: var(--clr-brand-light);
-  justify-content: center;
-  align-items: center;
-  padding: 0.25em;
-  width: 100%;
-  border-radius: 0.75em;
-  cursor: pointer;
-  &.active {
-    background-image: var(--clr-brand-default);
+  &.open {
+    animation-duration: 0.45s;
+    animation-fill-mode: both;
+    animation-name: open;
   }
-  transition: box-shadow 0.1s;
-  @media (hover: hover) {
-    &:hover {
-      box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.08);
-    }
+
+  &.close {
+    animation-duration: 0.2s;
+    animation-fill-mode: both;
+    animation-name: close;
   }
 }
 
-@keyframes flipInX {
+@keyframes open {
   0% {
     -webkit-transform: perspective(60em) rotateX(90deg);
     transform: perspective(60em) rotateX(90deg);
     opacity: 0;
   }
   0%, 40% {
-      -webkit-animation-timing-function: ease-in;
       animation-timing-function: ease-in;
   }
   40% {
@@ -155,5 +145,19 @@
   100% {
       -webkit-transform: perspective(60em);
       transform: perspective(60em);
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.4);
+    transform-origin: 100% -5%;
   }
 }
