@@ -13,17 +13,17 @@
 
   @media (min-width: 48rem) {
     position: fixed;
-    bottom: 3em;
+    bottom: 2.5em;
     right: 2.5em;
   }
   @media (min-width: 78.75rem) {
-    bottom: 5em;
+    bottom: 4.5em;
     right: 4.5em;
   }
 
   & .scrollup-button {
     position: absolute;
-    bottom: -1em;
+    bottom: 0;
     background-image: var(--clr-section-bg);
     height: 4em;
     width: 100%;
