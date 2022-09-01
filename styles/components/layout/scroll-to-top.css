@@ -1,9 +1,9 @@
 .scrollup {
-  display: inline-block;
-  position: fixed;
+  position: sticky;
+  margin-left: auto;
   bottom: 3em;
   right: 1.25em;
-  height: 4em;
+  height: 0;
   width: 4em;
   opacity: 1;
   padding: unset;
@@ -13,17 +13,20 @@
   }
 
   @media (min-width: 48rem) {
+    position: fixed;
     bottom: 3em;
     right: 2.5em;
   }
   @media (min-width: 78.75rem) {
-    bottom: 4.5em;
+    bottom: 5em;
     right: 4.5em;
   }
 
   & .scrollup-button {
+    position: absolute;
+    bottom: -1em;
     background-image: var(--clr-section-bg);
-    height: 100%;
+    height: 4em;
     width: 100%;
     justify-content: center;
     align-items: center;

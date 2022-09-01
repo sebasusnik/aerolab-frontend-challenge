@@ -3,9 +3,12 @@ import React, {useState} from 'react';
 import dynamic from 'next/dynamic';
 
 import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
 
 const Topbar = dynamic(() => import('./components/Topbar'));
+
+const ScrollToTop = dynamic(() => import('./components/ScrollToTop'), {
+  ssr: false,
+});
 
 const WavesBg = dynamic(() => import('./components/WavesBg'));
 
@@ -47,8 +50,8 @@ const Layout: React.FC<Props> = ({children}) => {
         <WavesBg />
         {children}
       </main>
-      <Footer />
       <ScrollToTop />
+      <Footer />
     </>
   );
 };
