@@ -108,7 +108,7 @@
   }
 
   &.open {
-    animation-duration: 0.4s;
+    animation-duration: 0.45s;
     animation-fill-mode: both;
     animation-name: open;
     animation-timing-function: ease-in;
