@@ -17,8 +17,8 @@
     right: 2.5em;
   }
   @media (min-width: 78.75rem) {
-    bottom: 4.5em;
-    right: 4.5em;
+    bottom: 4.75em;
+    right: 4.75em;
   }
 
   & .scrollup-button {
