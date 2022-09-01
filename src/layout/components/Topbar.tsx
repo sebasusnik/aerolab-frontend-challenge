@@ -24,7 +24,7 @@ const Navbar: React.FC<Props> = ({closeAeroPay, openAeroPay, isOpen, animation})
 
   return (
     <div
-      className={`topbar ${scrollDirection === ScrollDirection.down ? 'occult' : ''} bg-blured`}
+      className={`topbar ${scrollDirection === ScrollDirection.down ? 'hide' : ''} bg-blured`}
       onClick={() => {
         !!isOpen && closeAeroPay();
       }}

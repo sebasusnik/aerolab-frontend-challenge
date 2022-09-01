@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import dynamic from 'next/dynamic';
 
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 const Topbar = dynamic(() => import('./components/Topbar'));
 
@@ -47,6 +48,7 @@ const Layout: React.FC<Props> = ({children}) => {
         {children}
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 };

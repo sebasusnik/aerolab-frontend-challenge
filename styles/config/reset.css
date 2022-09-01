@@ -48,7 +48,7 @@ body {
     overflow-x: hidden;
 }
 
-/* occult the scrollbar */
+/* hide the scrollbar */
 ::-webkit-scrollbar{
   display: none;
 }

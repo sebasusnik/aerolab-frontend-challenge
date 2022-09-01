@@ -1,0 +1,38 @@
+.scrollup {
+  display: inline-block;
+  position: fixed;
+  bottom: 3em;
+  right: 1.25em;
+  height: 4em;
+  width: 4em;
+  opacity: 1;
+  padding: unset;
+  transition: opacity 0.3s;
+  &.hide {
+    opacity: 0;
+  }
+
+  @media (min-width: 48rem) {
+    bottom: 3em;
+    right: 2.5em;
+  }
+  @media (min-width: 78.75rem) {
+    bottom: 4.5em;
+    right: 4.5em;
+  }
+
+  & .scrollup-button {
+    background-image: var(--clr-section-bg);
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    cursor: pointer;
+    mix-blend-mode: exclusion;
+
+    & .scrollup-icon {
+      transform: rotate(0.75turn);
+    }
+  }
+}
