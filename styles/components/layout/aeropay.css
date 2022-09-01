@@ -108,42 +108,36 @@
   }
 
   &.open {
-    animation-duration: 0.45s;
+    animation-duration: 0.4s;
     animation-fill-mode: both;
     animation-name: open;
+    animation-timing-function: ease-in;
   }
 
   &.close {
-    animation-duration: 0.2s;
+    animation-duration: 0.25s;
     animation-fill-mode: both;
     animation-name: close;
+    animation-timing-function: ease-out;
   }
 }
 
 @keyframes open {
   0% {
-    -webkit-transform: perspective(60em) rotateX(90deg);
     transform: perspective(60em) rotateX(90deg);
     opacity: 0;
   }
-  0%, 40% {
-      animation-timing-function: ease-in;
-  }
   40% {
-      -webkit-transform: perspective(60em) rotateX(-20deg);
       transform: perspective(60em) rotateX(-20deg);
   }
   60% {
-      -webkit-transform: perspective(60em) rotateX(10deg);
       transform: perspective(60em) rotateX(10deg);
       opacity: 1;
   }
   80% {
-      -webkit-transform: perspective(60em) rotateX(-5deg);
       transform: perspective(60em) rotateX(-5deg);
   }
   100% {
-      -webkit-transform: perspective(60em);
       transform: perspective(60em);
   }
 }
