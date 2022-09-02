@@ -46,7 +46,6 @@ const LandingSection: React.FC = () => {
         <div className="landing-illustration">
           {/*    image optimized    */}
           <Image
-            priority
             src={heroImage}
             layout="fill"
             objectFit="scale-down"
