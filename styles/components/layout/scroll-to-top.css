@@ -34,8 +34,6 @@
     mix-blend-mode: exclusion;
 
     & .scrollup-icon {
-      height: 2em;
-      width: 2em;
       transform: rotate(0.75turn);
     }
   }

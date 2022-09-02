@@ -33,7 +33,7 @@ const ScrollToTop: React.FC = () => {
         aria-label="Scroll to Top"
         onClick={scrollToTop}
       >
-        <img aria-hidden="true" src="/icons/chevron-white.svg" className="scrollup-icon" />
+        <img aria-hidden="true" src="/icons/chevron-white.svg" className="scrollup-icon icon-md" />
       </button>
     </div>
   );
