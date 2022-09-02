@@ -1,15 +1,10 @@
 import React from 'react';
 
-import dynamic from 'next/dynamic';
-
 import Filter from './components/Filter';
+import Grid from './components/Grid';
 import Pagination from './components/Pagination';
 import Sort from './components/Sort';
 import {Product} from './types';
-
-const Grid = dynamic(() => import('./components/Grid'), {
-  ssr: true,
-});
 
 interface Props {
   products: Product[];
