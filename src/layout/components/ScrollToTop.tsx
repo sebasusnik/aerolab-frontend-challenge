@@ -27,8 +27,13 @@ const ScrollToTop: React.FC = () => {
 
   return (
     <div className={`scrollup ${isVisible ? '' : 'hide'}`}>
-      <button type="button" className="scrollup-button flex" onClick={scrollToTop}>
-        <img src="/icons/chevron-white.svg" className="scrollup-icon" />
+      <button
+        type="button"
+        className="scrollup-button flex"
+        aria-label="Scroll to Top"
+        onClick={scrollToTop}
+      >
+        <img aria-hidden="true" src="/icons/chevron-white.svg" className="scrollup-icon" />
       </button>
     </div>
   );

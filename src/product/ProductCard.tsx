@@ -29,6 +29,7 @@ const ProductCard: React.FC<Props> = ({product}) => {
             variant={product.cost < points ? ButtonVariants.Default : ButtonVariants.Disable}
             left={product.cost < points ? 'Redeem for' : 'You need'}
             right={product.cost.toString()}
+            type="button"
             action={() => console.log('hehe')}
           />
         ) : (

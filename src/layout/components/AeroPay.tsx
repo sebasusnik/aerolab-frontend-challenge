@@ -84,6 +84,7 @@ const AeroPay: React.FC<Props> = ({closeAeroPay, addPoints, points, animation}) 
             </div>
             <span className="sr-only">{`Now you have ${points} points, press enter to`}</span>
             <CTA
+              type="button"
               right="Add Points"
               ariaLabel={`Add ${amount} points.`}
               action={() => addPoints(amount)}
