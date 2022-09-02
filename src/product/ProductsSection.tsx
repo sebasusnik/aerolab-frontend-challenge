@@ -8,7 +8,7 @@ import Sort from './components/Sort';
 import {Product} from './types';
 
 const Grid = dynamic(() => import('./components/Grid'), {
-  ssr: false,
+  ssr: true,
 });
 
 interface Props {
