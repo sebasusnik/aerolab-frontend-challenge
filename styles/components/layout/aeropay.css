@@ -1,4 +1,5 @@
 .aeropay-wrapper {
+  -webkit-backface-visibility: hidden;
   bottom: -0.25em;
   right: 0;
   position: absolute;
