@@ -1,5 +1,7 @@
 .topbar {
-  z-index: 99;
+  z-index: 10;
+  visibility: visible;
+  backface-visibility: hidden;
   position: fixed;
   top: 0;
   width: 100%;

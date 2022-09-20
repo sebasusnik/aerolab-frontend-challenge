@@ -1,0 +1,138 @@
+.filter-wrapper {
+  white-space: nowrap;
+  align-items: center;
+  width: 100%;
+  height: 3.8125em;
+  & label {
+    display: none;
+  }
+  @media (min-width: 48rem) {
+    justify-content: flex-start;
+    gap: 1em;
+  }
+  @media (min-width: 78.75rem) {
+    padding-right: 2.5em;
+    border-right: 2px solid var(--clr-neutrals-300); /* divider */
+    max-width: 24.5625em;
+    & label {
+      display: block;
+    }
+  }
+  & .hybrid-select {
+    position: relative;
+    overflow: visible;
+    height: 100%;
+    width: 100%;
+    @media (min-width: 48rem) {
+      width: 16em;
+    }
+      & .filter-native-select {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        padding: 1em 1.34em;
+        border: 1px solid var(--clr-neutrals-300);
+        background-color: var(--clr-neutrals-0);
+        border-radius: 1em;
+        appearance: none;
+        
+        @media (min-width: 78.75rem) {
+          padding: 0.92em 1.34em;
+        }
+        @media (hover: none) {
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      & .native-select-arrow {
+        position: absolute;
+        pointer-events: none;
+        right: 0.75em;
+        top: 37%;
+        bottom: 63%;
+        background: white;
+      }
+
+    & .filter-custom-select {
+      display: none;
+      position: absolute;
+      inset: 0;
+      cursor: pointer;
+      @media (hover: hover) and (min-width: 48rem) {
+        display: block;
+      }
+      & .filter-list {
+        position: absolute;
+        top: 3.75em;
+        flex-direction: column;
+        overflow-y: overlay;
+        scrollbar-gutter: stable both-edges;
+        scrollbar-width: thin;
+        margin-top: 0.5em;
+        padding: 0.5em 0;
+        width: 100%;
+        max-height: 22em;
+        border-radius: 0.5em;
+        border: 1px solid var(--clr-neutrals-300);
+        background-color: var(--clr-neutrals-0);
+        z-index: 20;
+        &::-webkit-scrollbar {
+          display: inherit;
+          width: 0.4em;
+          background-color: none;
+        }
+        &::-webkit-scrollbar-track {
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          background-color: none;
+        }
+        &::-webkit-scrollbar-thumb {
+          -webkit-border-radius: 10px;
+          width: 0.25em;
+          border-radius: 20px;
+          padding: 4px;
+          
+          transition: background-color 0.3s;
+          background-color: none;
+        }
+        @media (hover: hover) {
+          &:hover::-webkit-scrollbar-thumb {
+            border: solid 1px transparent;
+            background-color: var(--clr-neutrals-300); 
+          }
+          &:hover .filter-options.active {
+            background-color: var(--clr-neutrals-0);
+          }
+        }
+        @media (min-width: 78.75rem) {
+          max-height: 23.25em;
+        }
+        & .filter-options {
+          width: 100%;
+          text-align: left;
+          padding: 1em 1.5em;
+          transition: background-color 0.1s;
+          &.active {
+            background-color: var(--clr-neutrals-100);
+          }
+          @media (hover: hover) {
+            &:hover {
+              background-color: var(--clr-neutrals-100);
+            }
+            &:hover.active {
+              background-color: var(--clr-neutrals-100);
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (hover: hover) {
+  .filter-native-select:focus + .filter-custom-select {
+    display: none;
+  }
+}

@@ -38,9 +38,9 @@ const AeroPay: React.FC<Props> = ({closeAeroPay, addPoints, points, animation}) 
         <div ref={aeroPayHeadingRef} tabIndex={-1} className="aeropay-header flex">
           <h2 className="text-lg">Add Balance</h2>
           <span className="sr-only"> or press escape to close. </span>
-          <button onClick={closeAeroPay}>
+          <div onClick={closeAeroPay}>
             <img className="icon-sm" src="/icons/cross-active.svg" aria-hidden="true" alt="" />
-          </button>
+          </div>
           <span className="sr-only">Select an amount, {`${amount} is selected now`}: </span>
         </div>
         <div className="aeropay-content flex">

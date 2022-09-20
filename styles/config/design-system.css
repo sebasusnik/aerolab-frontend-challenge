@@ -35,13 +35,13 @@
 
   /* font-sizes */
   --fs-900: clamp(6em, 8vw + 3em, 12.5em); /* smoothly from 96px to 200px */
-  --fs-800: 3rem;    /* 48px */
-  --fs-700: 2rem;    /* 32px */
-  --fs-600: 1.5rem;  /* 24px */
-  --fs-500: 1.125rem;/* 18px */
-  --fs-400: 1rem;    /* 16px */
-  --fs-300: 0.875rem;/* 14px */
-  --fs-200: 0.75rem; /* 12px */
+  --fs-800: 3em;    /* 48px */
+  --fs-700: 2em;    /* 32px */
+  --fs-600: 1.5em;  /* 24px */
+  --fs-500: 1.125em;/* 18px */
+  --fs-400: 1em;    /* 16px */
+  --fs-300: 0.875em;/* 14px */
+  --fs-200: 0.75em; /* 12px */
   
   /* font-family */
   --ff-sans-normal: 'Montserrat', sans-serif;

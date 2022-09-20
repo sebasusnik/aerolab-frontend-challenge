@@ -204,6 +204,10 @@ z-index: 100;
   background: var(--clr-neutrals-900)
 }
 
+.bg-brand {
+  background-image: var(--clr-brand-default);
+}
+
 
 /* =========== ELEVATION =========== */
 

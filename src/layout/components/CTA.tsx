@@ -24,7 +24,7 @@ const CTA: React.FC<Props> = ({variant, left, right, ariaLabel, action, type}) =
     return (
       <button type={type} className="cta disable">
         {left && <span className="text-lg secondary noselect">{left}</span>}
-        <img aria-hidden="true" className="icon-sm" src="/icons/aeropay-disable.svg" alt="" />
+        <img className="icon-sm" src="/icons/aeropay-disable.svg" alt="" aria-hidden="true" />
         {right && <span className="text-lg secondary noselect">{right}</span>}
       </button>
     );

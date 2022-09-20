@@ -19,13 +19,13 @@
   @media (min-width: 78.75rem) {
     background-color: var(--clr-neutrals-0);
 
-    z-index: 20;
+    z-index: 2;
     min-width: 33.25em;
     height: 42.25em;
     
     &:first-child {
       transform: translate(calc(5em + .5rem), 2em) rotate(-3deg);
-      z-index: 10;
+      z-index: 1;
     }
     &:last-child {
       transform: translate(calc(-5em - .5rem), 2em) rotate(3deg);

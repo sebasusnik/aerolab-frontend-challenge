@@ -1,8 +1,11 @@
 .aeropay-wrapper {
-  -webkit-backface-visibility: hidden;
+  z-index: 90;
+
   bottom: -0.25em;
   right: 0;
   position: absolute;
+  visibility: visible;
+  backface-visibility: hidden;
   @media (min-width: 78.75rem) {
     bottom: -0.5em;
   }
@@ -11,13 +14,16 @@
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 999999;
   width: 17.5em;
   border: 1px solid var(--clr-neutrals-300);
   background-color: var(--clr-neutrals-0);
   border-radius: 1em;
   box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.08);
   transition: top 0.2s ease-out;
+
+  z-index: 91;
+
+
 
 
 
@@ -48,9 +54,14 @@
     right: 1.25em;
   }
   & .aeropay-header {
+    z-index: 99;
     align-items: center;
     padding: 0.85em 1.25em;
     border-bottom: 1px solid var(--clr-neutrals-300);
+    &:focus {
+      outline: none
+    }
+    
     @media (min-width: 78.75rem){
       padding: 1em 1.5em;
     }
@@ -62,6 +73,7 @@
     padding: 1.25em;
     flex-direction: column;
     gap: 2.5em;
+    
     @media (min-width: 78.75rem) {
       padding: 1.5em;
     }
