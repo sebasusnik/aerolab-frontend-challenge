@@ -208,6 +208,10 @@ z-index: 100;
   background-image: var(--clr-brand-default);
 }
 
+.bg-brand-light {
+  background-color: var(--clr-brand-light);
+}
+
 
 /* =========== ELEVATION =========== */
 

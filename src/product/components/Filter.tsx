@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 
+import useOutsideClick from '~layout/hooks/useOutsideClick';
 import {Filters} from '~product/types';
 
 interface Props {
@@ -15,6 +16,8 @@ const Filter: React.FC<Props> = ({currentCategory, setFilter}) => {
   const handleToggleOpen = () => {
     setIsOpen(!isOpen);
   };
+
+  const ref = useOutsideClick(() => setIsOpen(false));
 
   return (
     <div className="filter-wrapper flex">
@@ -36,7 +39,7 @@ const Filter: React.FC<Props> = ({currentCategory, setFilter}) => {
         </select>
         <div className="filter-custom-select" aria-hidden="true" onClick={handleToggleOpen}>
           {isOpen && (
-            <div className="filter-list flex">
+            <div ref={ref} className="filter-list flex">
               {FILTERS.map(category => (
                 <button
                   key={category}
