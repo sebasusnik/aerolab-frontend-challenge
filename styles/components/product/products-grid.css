@@ -2,7 +2,7 @@
   gap: 3em 1.5em;
   grid-auto-rows: 34em;
   grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
-  margin-bottom: 4em;
+  margin-bottom: 4rem;
   @media (min-width: 48rem) {
     font-size: clamp(.70em, 1.4vw + .05em, 1em);
   }

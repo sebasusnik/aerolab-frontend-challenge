@@ -29,6 +29,7 @@
     gap: 1.5em;
     margin-bottom: 8em;
     @media (min-width: 78.75rem) {
+      font-size: clamp(.82em, .8vw + .1em, 1em);
       height: 4em;
       & .count {
         white-space: nowrap;
