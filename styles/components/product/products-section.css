@@ -23,13 +23,13 @@
   }
   & .products-section-footer {
     position: relative;
-    height: 4em;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
     gap: 1.5em;
     margin-bottom: 8em;
     @media (min-width: 78.75rem) {
+      height: 4em;
       & .count {
         white-space: nowrap;
       }
