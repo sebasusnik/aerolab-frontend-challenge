@@ -37,9 +37,14 @@ const Filter: React.FC<Props> = ({currentCategory, setFilter}) => {
             </option>
           ))}
         </select>
-        <div className="filter-custom-select" aria-hidden="true" onClick={handleToggleOpen}>
+        <div
+          ref={ref}
+          className="filter-custom-select"
+          aria-hidden="true"
+          onClick={handleToggleOpen}
+        >
           {isOpen && (
-            <div ref={ref} className="filter-list flex">
+            <div className="filter-list flex">
               {FILTERS.map(category => (
                 <button
                   key={category}
@@ -53,7 +58,7 @@ const Filter: React.FC<Props> = ({currentCategory, setFilter}) => {
           )}
         </div>
         <img
-          className="native-select-arrow"
+          className="native-select-arrow noselect"
           src="/icons/select-arrow.svg"
           alt=""
           aria-hidden="true"
