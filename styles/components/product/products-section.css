@@ -34,7 +34,7 @@
         white-space: nowrap;
       }
       & .pager {
-        font-size: clamp(.82em, .8vw + .1em, 1em);
+        font-size: clamp(.82em, .8vw + .2em, 1em);
         position: absolute;
         right: 0;
       }

@@ -49,9 +49,9 @@ body {
 }
 
 /* hide the scrollbar */
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
   display: none;
-}
+} */
 
 /* make images easier to work with */
 img,
