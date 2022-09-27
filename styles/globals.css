@@ -38,6 +38,8 @@
 @import './components/product/product-card.css';
 @import './components/product/products-filter.css';
 @import './components/product/products-sort.css';
+@import './components/product/products-pager.css';
+
 
 
 

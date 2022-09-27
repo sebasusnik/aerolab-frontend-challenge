@@ -52,7 +52,7 @@ const AeroCoin: React.FC<Props> = ({
             <Loader />
           </div>
         </div>
-        <img aria-hidden="true" src="/icons/chevron-active.svg" className="aerocoin-chevron" />
+        <img aria-hidden="true" src="/icons/chevron-default.svg" className="aerocoin-chevron" />
       </button>
     );
   }
@@ -75,7 +75,7 @@ const AeroCoin: React.FC<Props> = ({
         </div>
         <img
           aria-hidden="true"
-          src="/icons/chevron-active.svg"
+          src="/icons/chevron-default.svg"
           className={`aerocoin-chevron noselect ${animation}`}
         />
       </button>

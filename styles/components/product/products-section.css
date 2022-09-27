@@ -1,20 +1,42 @@
 .products-section {
   padding-top: 1em;
-
   & .products-section-controls {
+    position: relative;
     margin: 2.5em 0 4em;
     flex-direction: column;
     gap: 1.5em;
-
     @media (min-width: 78.75rem) {
       gap: 0;
       font-size: clamp(.82em, .8vw + .1em, 1em);
       flex-direction: row;
       justify-content: flex-start;
     }
+    & .pager {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      @media (min-width: 48rem) {
+        display: inherit;
+      }
+    }
   }
   & .products-section-footer {
-    flex-direction: row-reverse;
-
+    position: relative;
+    height: 4em;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    margin-bottom: 8em;
+    @media (min-width: 78.75rem) {
+      & .count {
+        white-space: nowrap;
+      }
+      & .pager {
+        position: absolute;
+        right: 0;
+      }
+    }
   }
 }

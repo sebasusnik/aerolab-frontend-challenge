@@ -3,7 +3,7 @@ import React, {useMemo, useState} from 'react';
 import Count from './components/Count';
 import Filter from './components/Filter';
 import Grid from './components/Grid';
-import Pagination from './components/Pagination';
+import Pager from './components/Pager';
 import SortSelector from './components/Sort';
 import {Filters, Product, Sort} from './types';
 
@@ -49,12 +49,12 @@ const ProductsSection: React.FC<Props> = ({products}) => {
       <div className="products-section-controls flex">
         <Filter currentCategory={filter} setFilter={setFilter} />
         <SortSelector activeSort={sort} changeSort={setSort} />
-        <Pagination />
+        <Pager />
       </div>
       <Grid products={productsData} />
       <div className="products-section-footer flex">
         <Count />
-        <Pagination />
+        <Pager />
       </div>
     </section>
   );
