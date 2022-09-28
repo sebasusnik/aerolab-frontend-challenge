@@ -2,7 +2,7 @@
   padding-top: 1em;
   & .products-section-controls {
     position: relative;
-    margin: 2.5em 0 4em;
+    margin: 2.5em 0 4rem;
     flex-direction: column;
     gap: 1.5em;
     @media (min-width: 78.75rem) {
@@ -30,6 +30,7 @@
     margin-bottom: 8em;
     @media (min-width: 78.75rem) {
       height: 4em;
+      margin-bottom: clamp(5em, 0.5vw + 5em,8em);
       & .count {
         white-space: nowrap;
       }
