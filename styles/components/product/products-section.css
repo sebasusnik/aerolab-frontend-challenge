@@ -30,7 +30,7 @@
     margin-bottom: 8em;
     @media (min-width: 78.75rem) {
       height: 4em;
-      margin-bottom: clamp(5em, 0.5vw + 5em,8em);
+      margin-bottom: clamp(3em, 5vw + 2em, 8em);
       & .count {
         white-space: nowrap;
       }

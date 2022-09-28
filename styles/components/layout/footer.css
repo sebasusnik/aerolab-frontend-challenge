@@ -3,7 +3,7 @@
   align-items: center;
   height: 7.5em;
   @media (min-width: 78.75rem) {
-    height: 12.5em;
+    height: clamp(6em, 7vw + 4em ,12.5em);
   }
   & .github-link {
     justify-content: center;

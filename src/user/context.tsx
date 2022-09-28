@@ -26,7 +26,8 @@ const UserProvider: React.FC<Props> = ({children}) => {
   async function handleRedeem(product: Product) {
     if (user.id === '' || status === UserStatus.pending) return;
 
-    return productApi.redeem(product).then(() => {
+    return productApi.redeem(product).then(r => {
+      console.log(r);
       setUser({...user, points: user.points - product.cost});
     });
   }
