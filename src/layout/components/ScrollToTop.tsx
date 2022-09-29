@@ -26,7 +26,12 @@ const ScrollToTop: React.FC = () => {
   }, []);
 
   return (
-    <div className={`scrollup ${isVisible ? '' : 'hide'}`}>
+    <div
+      className={`scrollup ${isVisible ? '' : 'hide'}`}
+      onClick={e => {
+        e.stopPropagation();
+      }}
+    >
       <button
         type="button"
         className="scrollup-button flex"
