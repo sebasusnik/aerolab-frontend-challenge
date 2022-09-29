@@ -17,7 +17,7 @@ const Filter: React.FC<Props> = ({currentCategory, setFilter}) => {
     setIsOpen(!isOpen);
   };
 
-  const ref = useOutsideClick(() => setIsOpen(false));
+  const ref = useOutsideClick(() => setIsOpen(false), true);
 
   return (
     <div className="filter-wrapper flex">

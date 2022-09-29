@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 
 import CTA from './CTA';
+import useOutsideClick from '~layout/hooks/useOutsideClick';
 import {ScrollDirection, useScrollDirection} from '~layout/hooks/useScrollDirection';
 import {Amount} from '~layout/types';
 import {useUser} from '~user/hooks';
@@ -21,15 +22,18 @@ const AeroPay: React.FC<Props> = ({closeAeroPay, addPoints, points, animation}) 
 
   const scrollDirection: ScrollDirection = useScrollDirection();
 
+  const ref = useOutsideClick(() => closeAeroPay());
+
   const aeroPayHeadingRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (aeroPayHeadingRef.current?.focus) aeroPayHeadingRef.current?.focus();
+    aeroPayHeadingRef.current?.focus();
   }, []);
 
   return (
     <div className="aeropay-wrapper">
       <div
+        ref={ref}
         className={`aeropay ${scrollDirection === ScrollDirection.down ? 'top' : ''} ${animation}`}
         onClick={e => {
           e.stopPropagation();

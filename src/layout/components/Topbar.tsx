@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import dynamic from 'next/dynamic';
 
@@ -9,26 +9,27 @@ import {ScrollDirection, useScrollDirection} from '~layout/hooks/useScrollDirect
 import {usePoints} from '~user/hooks';
 const Aeropay = dynamic(() => import('./AeroPay'));
 
-interface Props {
-  closeAeroPay: () => void;
-  openAeroPay: () => void;
-  isOpen: boolean;
-  animation: string;
-}
+const Navbar: React.FC = () => {
+  const [animation, setAnimation] = useState<'open' | 'close'>('close');
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
-const Navbar: React.FC<Props> = ({closeAeroPay, openAeroPay, isOpen, animation}) => {
+  const openAeroPay = () => {
+    setAnimation('open');
+    setIsOpen(true); // this function toggles the isOpen state
+  };
+
+  const closeAeroPay = async () => {
+    setAnimation('close');
+    await new Promise(resolve => setTimeout(resolve, 200));
+    setIsOpen(false); // this function set isOpen to false
+  };
   // When scroll direction is down, topbar hides
   const scrollDirection: ScrollDirection = useScrollDirection();
 
   const [points, addPoints] = usePoints();
 
   return (
-    <div
-      className={`topbar ${scrollDirection === ScrollDirection.down ? 'hide' : ''} bg-blured`}
-      onClick={() => {
-        !!isOpen && closeAeroPay();
-      }}
-    >
+    <div className={`topbar ${scrollDirection === ScrollDirection.down ? 'hide' : ''} bg-blured`}>
       <div className="container">
         <SkipToContent />
         <div className="topbar-content flex">

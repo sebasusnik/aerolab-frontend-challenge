@@ -63,7 +63,10 @@ const AeroCoin: React.FC<Props> = ({
         ref={aeroCoinRef}
         type="button"
         className={`aerocoin flex ${isOpen ? 'active' : ''}`}
-        onClick={openAeroPay}
+        onClick={e => {
+          e.stopPropagation();
+          openAeroPay();
+        }}
       >
         <div className="aerocoin-content flex">
           <img className="icon-md noselect" aria-hidden="true" src="/icons/aeropay-1.svg" />

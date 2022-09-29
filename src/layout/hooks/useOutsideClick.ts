@@ -1,6 +1,6 @@
 import {useRef, useEffect} from 'react';
 
-const useOutsideClick = (callback: () => void) => {
+const useOutsideClick = (callback: () => void, useCapture?: boolean) => {
   const ref = useRef<any>();
 
   useEffect(() => {
@@ -10,10 +10,10 @@ const useOutsideClick = (callback: () => void) => {
       }
     };
 
-    document.addEventListener('click', handleClick, true);
+    document.addEventListener('click', handleClick, useCapture);
 
     return () => {
-      document.removeEventListener('click', handleClick, true);
+      document.removeEventListener('click', handleClick, useCapture);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ref]);
