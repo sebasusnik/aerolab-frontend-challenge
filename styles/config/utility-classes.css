@@ -33,6 +33,7 @@
 }
 
 .noselect {
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); /* remove touch blue highlight */
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */

@@ -27,7 +27,7 @@ const Layout: React.FC<Props> = ({children}) => {
 
   const closeAeroPay = async () => {
     setAnimation('close');
-    await new Promise(resolve => setTimeout(resolve, 150));
+    await new Promise(resolve => setTimeout(resolve, 200));
     setIsOpen(false); // this function set isOpen to false
   };
 

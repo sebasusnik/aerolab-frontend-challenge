@@ -69,3 +69,17 @@ const Filter: React.FC<Props> = ({currentCategory, setFilter}) => {
 };
 
 export default Filter;
+
+/* 
+
+This hybrid custom-native select component is based on this article by Sandrina Pereira
+
+https://css-tricks.com/striking-a-balance-between-native-and-custom-select-elements/
+
+Here some examples of her approach
+
+https://codepen.io/sandrina-p/pen/YzyOYRr?editors=0010
+
+https://codepen.io/sandrina-p/pen/yLprQgj?editors=1111
+
+*/
