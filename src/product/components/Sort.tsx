@@ -21,7 +21,10 @@ const SortSelector: React.FC<Props> = ({activeSort, changeSort}) => {
             className={`sort-button ${sort === activeSort ? 'bg-brand' : ''}`}
             aria-checked={sort === activeSort}
             aria-labelledby={`${sort.toLowerCase().split(' ').join('')}`}
-            onClick={() => changeSort(sort)}
+            onClick={e => {
+              e.stopPropagation();
+              changeSort(sort);
+            }}
           >
             <span
               id={`${sort.toLowerCase().split(' ').join('')}`}

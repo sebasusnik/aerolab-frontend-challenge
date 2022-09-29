@@ -32,6 +32,11 @@
     border-radius: 1em;
     cursor: pointer;
     mix-blend-mode: exclusion;
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: 0 0.125em 0.75em rgba(0, 0, 0, 0.1);
+      }
+    }
 
     & .scrollup-icon {
       transform: rotate(0.75turn);

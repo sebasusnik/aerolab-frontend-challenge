@@ -24,7 +24,12 @@ const Filter: React.FC<Props> = ({currentCategory, setFilter}) => {
       <label className="text-lg secondary noselect" id="filterLabel">
         Filter by:
       </label>
-      <div className="hybrid-select">
+      <div
+        className="hybrid-select"
+        onClick={e => {
+          e.stopPropagation();
+        }}
+      >
         <select
           className="filter-native-select text-lg secondary"
           id=""
