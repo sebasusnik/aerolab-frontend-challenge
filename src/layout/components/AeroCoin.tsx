@@ -64,8 +64,10 @@ const AeroCoin: React.FC<Props> = ({
         type="button"
         className={`aerocoin flex ${isOpen ? 'active' : ''}`}
         onClick={e => {
-          e.stopPropagation();
-          openAeroPay();
+          if (!isOpen) {
+            e.stopPropagation();
+            openAeroPay();
+          }
         }}
       >
         <div className="aerocoin-content flex">
