@@ -23,7 +23,7 @@
 
   & .scrollup-button {
     position: absolute;
-    bottom: 0;
+    bottom: 1em;
     background-image: var(--clr-section-bg);
     height: 4em;
     width: 100%;
