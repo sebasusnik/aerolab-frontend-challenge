@@ -13,15 +13,28 @@
     justify-content: center;
     height: 2.25em;
     width: 2.25em;
+    cursor: pointer;
+    background-color: var(--clr-brand-light);
     @media (min-width: 78.75rem) {
       height: 2.5em;
       width: 2.5em;
+    }
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--clr-brand-light-2);
+      }
+    }
+    @media (hover: none) {
+      &:active {
+        background-color: var(--clr-brand-light-2);
+      }
     }
     & .left {
       transform: rotate(0.5turn);
     }
     &.disable {
       background-color: var(--clr-neutrals-200);
+      cursor: not-allowed;
       & .chevron {
       }
     }

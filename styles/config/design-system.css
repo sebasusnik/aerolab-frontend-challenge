@@ -63,6 +63,7 @@
   --clr-brand-default: linear-gradient(102.47deg, hsl(215, 84%, 51%) -5.34%, hsl(300, 100%, 75%) 106.58%);
   --clr-brand-hover: linear-gradient(102.47deg, #1667D9 -5.34%, #F279F2 106.58%);;
   --clr-brand-light: hsl(215 100% 95%);
+  --clr-brand-light-2: hsl(215, 100%, 90%);
 
   /* greens */
   --clr-green-default: hsl(148 67% 48%);

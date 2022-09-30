@@ -15,13 +15,13 @@ const Navbar: React.FC = () => {
 
   const openAeroPay = () => {
     setAnimation('open');
-    setIsOpen(true); // this function toggles the isOpen state
+    setIsOpen(true);
   };
 
   const closeAeroPay = async () => {
     setAnimation('close');
     await new Promise(resolve => setTimeout(resolve, 200));
-    setIsOpen(false); // this function set isOpen to false
+    setIsOpen(false);
   };
   // When scroll direction is down, topbar hides
   const scrollDirection: ScrollDirection = useScrollDirection();

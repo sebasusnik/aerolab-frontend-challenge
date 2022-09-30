@@ -18,7 +18,7 @@ const PagerButton: React.FC<Props> = ({disable, left}) => {
     );
 
   return (
-    <button className="pager-button flex bg-brand-light">
+    <button className="pager-button flex">
       <img
         className={`chevron ${left ? 'left' : ''} icon-sm`}
         src="/icons/chevron-default.svg"
