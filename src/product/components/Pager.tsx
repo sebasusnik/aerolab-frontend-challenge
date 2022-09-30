@@ -2,9 +2,14 @@ import React from 'react';
 
 import PagerButton from './PagerButton';
 
-interface Props {}
+interface Props {
+  currentPage: number;
+  maxPage: number;
+  next: () => void;
+  prev: () => void;
+}
 
-const Pager: React.FC<Props> = () => {
+const Pager: React.FC<Props> = ({currentPage, maxPage, next, prev}) => {
   return (
     <div
       className="pager flex"
@@ -12,11 +17,14 @@ const Pager: React.FC<Props> = () => {
         e.stopPropagation();
       }}
     >
-      <PagerButton disable={true} left={true} />
+      <PagerButton left={true} action={() => prev()} disable={currentPage === 1} />
       <p className="text-lg secondary">
-        Page: <span className="brand">1 of 2</span>
+        Page:{' '}
+        <span className="brand">
+          {currentPage} of {maxPage}
+        </span>
       </p>
-      <PagerButton />
+      <PagerButton action={() => next()} disable={currentPage === maxPage} />
     </div>
   );
 };

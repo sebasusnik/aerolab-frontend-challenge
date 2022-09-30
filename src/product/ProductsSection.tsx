@@ -1,10 +1,11 @@
-import React, {useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import Count from './components/Count';
 import Filter from './components/Filter';
 import Grid from './components/Grid';
 import Pager from './components/Pager';
 import SortSelector from './components/Sort';
+import usePagination from './hooks/usePagination';
 import {Filters, Product, Sort} from './types';
 
 interface Props {
@@ -12,8 +13,33 @@ interface Props {
 }
 
 const ProductsSection: React.FC<Props> = ({products}) => {
+  const [offset, setOffset] = useState<number>(16);
+  const [totalCount, setTotalCount] = useState<number>(products.length);
+  const {next, prev, currentPage, maxPage} = usePagination(totalCount, offset);
   const [filter, setFilter] = useState<Filters>(Filters.AllProducts);
   const [sort, setSort] = useState<Sort>(Sort.MostRecent);
+
+  const resizeFunction = () => {
+    if (window.innerWidth <= 768) {
+      setOffset(8);
+    } else if (window.innerWidth <= 1260) {
+      setOffset(12);
+    } else {
+      setOffset(16);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', resizeFunction);
+
+    return () => {
+      window.removeEventListener('resize', resizeFunction);
+    };
+  }, []);
+
+  useEffect(() => {
+    resizeFunction();
+  }, []);
 
   const productsData = useMemo(() => {
     let computedProducts = [...products];
@@ -38,8 +64,17 @@ const ProductsSection: React.FC<Props> = ({products}) => {
       }
     }
 
-    return computedProducts;
-  }, [filter, sort, products]);
+    setTotalCount(computedProducts.length);
+
+    if (totalCount < offset) {
+      return computedProducts;
+    }
+
+    const begin = (currentPage - 1) * offset;
+    const end = begin + offset;
+
+    return computedProducts.slice(begin, end);
+  }, [products, sort, totalCount, offset, currentPage, filter]);
 
   return (
     <section id="products" tabIndex={-1} className="products-section container">
@@ -49,12 +84,12 @@ const ProductsSection: React.FC<Props> = ({products}) => {
       <div className="products-section-controls flex">
         <Filter currentCategory={filter} setFilter={setFilter} />
         <SortSelector activeSort={sort} changeSort={setSort} />
-        <Pager />
+        <Pager next={next} prev={prev} currentPage={currentPage} maxPage={maxPage} />
       </div>
       <Grid products={productsData} />
       <div className="products-section-footer flex">
-        <Count />
-        <Pager />
+        <Count currentCount={productsData.length} totalCount={totalCount} />
+        <Pager next={next} prev={prev} currentPage={currentPage} maxPage={maxPage} />
       </div>
     </section>
   );

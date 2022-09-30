@@ -8,7 +8,7 @@ import HomePage from '~home/HomePage';
 import api from '~product/api';
 import {Product} from '~product/types';
 
-const ProductsSection = dynamic(() => import('~product/ProductsSection'));
+const ProductsSection = dynamic(() => import('~product/ProductsSection'), {ssr: false});
 
 interface Props {
   products: Product[];
