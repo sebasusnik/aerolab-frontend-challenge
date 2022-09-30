@@ -14,8 +14,9 @@ function usePagination(dataLength: number, itemsPerPage: number) {
    */
 
   useEffect(() => {
+    if (dataLength > itemsPerPage) setCurrentPage(1);
     setCurrentPage(1);
-  }, [itemsPerPage]);
+  }, [dataLength, itemsPerPage]);
 
   function next() {
     setCurrentPage(currentPage => Math.min(currentPage + 1, maxPage));

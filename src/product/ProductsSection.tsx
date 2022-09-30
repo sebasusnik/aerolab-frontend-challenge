@@ -47,6 +47,7 @@ const ProductsSection: React.FC<Props> = ({products}) => {
     computedProducts = computedProducts.filter(product =>
       filter !== Filters.AllProducts ? product.category === filter : product,
     );
+
     setTotalCount(computedProducts.length);
 
     switch (sort) {
