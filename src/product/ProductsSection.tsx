@@ -87,7 +87,11 @@ const ProductsSection: React.FC<Props> = ({products}) => {
       </div>
       <Grid products={productsData} />
       <div className="products-section-footer flex">
-        <Count currentCount={productsData.length} totalCount={totalCount} />
+        <Count
+          currentCount={productsData.length}
+          totalCount={totalCount}
+          currentPage={currentPage}
+        />
         <Pager next={next} prev={prev} currentPage={currentPage} maxPage={maxPage} />
       </div>
     </section>

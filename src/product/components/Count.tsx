@@ -1,16 +1,17 @@
 import React from 'react';
 
 interface Props {
-  currentCount?: number;
-  totalCount?: number;
+  currentCount: number;
+  totalCount: number;
+  currentPage: number;
 }
 
-const Count: React.FC<Props> = ({currentCount, totalCount}) => {
+const Count: React.FC<Props> = ({currentCount, totalCount, currentPage}) => {
   return (
     <div className="count">
       <p className="text-lg secondary">
         <span className="brand">
-          {currentCount} of {totalCount}
+          {currentCount * currentPage} of {totalCount}
         </span>{' '}
         products
       </p>
