@@ -17,7 +17,7 @@ const Pager: React.FC<Props> = ({currentPage, maxPage, next, prev}) => {
         e.stopPropagation();
       }}
     >
-      <PagerButton left={true} action={() => prev()} disable={currentPage === (1 || 0)} />
+      <PagerButton left action={() => prev()} disable={currentPage === (1 || 0)} />
       <p className="text-lg secondary">
         Page:{' '}
         <span className="brand">

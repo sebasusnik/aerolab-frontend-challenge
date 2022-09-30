@@ -7,19 +7,8 @@ interface Props {
 }
 
 const PagerButton: React.FC<Props> = ({disable, left, action}) => {
-  if (disable)
-    return (
-      <button className="pager-button disable flex">
-        <img
-          className={`chevron ${left ? 'left' : ''} icon-sm`}
-          src="/icons/chevron-disable.svg"
-          alt=""
-        />
-      </button>
-    );
-
   return (
-    <button className="pager-button flex" onClick={action}>
+    <button className={`pager-button ${disable ? 'disable' : ''} flex`} onClick={action}>
       <img
         className={`chevron ${left ? 'left' : ''} icon-sm`}
         src="/icons/chevron-default.svg"
