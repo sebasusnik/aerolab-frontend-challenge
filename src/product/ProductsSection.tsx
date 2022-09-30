@@ -47,6 +47,7 @@ const ProductsSection: React.FC<Props> = ({products}) => {
     computedProducts = computedProducts.filter(product =>
       filter !== Filters.AllProducts ? product.category === filter : product,
     );
+    setTotalCount(computedProducts.length);
 
     switch (sort) {
       case Sort.HighestPrice: {
@@ -63,8 +64,6 @@ const ProductsSection: React.FC<Props> = ({products}) => {
         break;
       }
     }
-
-    setTotalCount(computedProducts.length);
 
     if (totalCount < offset) {
       return computedProducts;

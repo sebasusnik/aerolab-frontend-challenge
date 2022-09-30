@@ -17,14 +17,14 @@ const Pager: React.FC<Props> = ({currentPage, maxPage, next, prev}) => {
         e.stopPropagation();
       }}
     >
-      <PagerButton left={true} action={() => prev()} disable={currentPage === 1} />
+      <PagerButton left={true} action={() => prev()} disable={currentPage === (1 || 0)} />
       <p className="text-lg secondary">
         Page:{' '}
         <span className="brand">
-          {currentPage} of {maxPage}
+          {maxPage === 0 ? 0 : currentPage} of {maxPage}
         </span>
       </p>
-      <PagerButton action={() => next()} disable={currentPage === maxPage} />
+      <PagerButton action={() => next()} disable={currentPage === maxPage || maxPage === 0} />
     </div>
   );
 };
