@@ -9,7 +9,7 @@ const LandingSection: React.FC = () => {
     <section className="container">
       <div className="landing flex">
         <div className="landing-content flex">
-          <h1 role="heading" aria-level={1} className="landing-heading flex noselect">
+          <h1 role="heading" aria-level={1} className="landing-heading flex noselect notranslate">
             <span className="text-lg allcaps secondary">Explore the</span>
             <span className="landing-title title-lg allcaps">
               <span className="brand">tech</span> <br />
