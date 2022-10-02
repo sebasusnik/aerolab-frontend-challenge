@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import Count from './components/Count';
 import Filter from './components/Filter';
@@ -13,6 +13,7 @@ interface Props {
 }
 
 const ProductsSection: React.FC<Props> = ({products}) => {
+  const ref = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState<number>(16);
   const [totalCount, setTotalCount] = useState<number>(products.length);
   const {next, prev, currentPage, maxPage} = usePagination(totalCount, offset);
@@ -40,6 +41,10 @@ const ProductsSection: React.FC<Props> = ({products}) => {
   useEffect(() => {
     resizeFunction();
   }, []);
+
+  useEffect(() => {
+    if (ref.current) window.scrollTo({top: ref.current.offsetTop - 50});
+  }, [currentPage]);
 
   const productsData = useMemo(() => {
     let computedProducts = [...products];
@@ -77,7 +82,7 @@ const ProductsSection: React.FC<Props> = ({products}) => {
   }, [products, sort, totalCount, offset, currentPage, filter]);
 
   return (
-    <section id="products" tabIndex={-1} className="products-section container">
+    <section ref={ref} id="products" tabIndex={-1} className="products-section container">
       <h2 className="products-section-heading title-md allcaps noselect">
         <span className="brand">Tech</span> <span>Products</span>
       </h2>
