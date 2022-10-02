@@ -45,7 +45,7 @@ const ProductsSection: React.FC<Props> = ({products}) => {
   useEffect(() => {
     if (window.pageYOffset === 0) return;
     if (ref.current) window.scrollTo({top: ref.current.offsetTop - 50});
-  }, [next, prev]);
+  }, [currentPage]);
 
   const productsData = useMemo(() => {
     let computedProducts = [...products];
