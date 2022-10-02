@@ -44,7 +44,7 @@ const ProductsSection: React.FC<Props> = ({products}) => {
 
   useEffect(() => {
     if (ref.current) {
-      if (window.pageYOffset <= ref.current.offsetTop + 100) return;
+      if (window.pageYOffset <= ref.current.offsetTop + 80) return;
       window.scrollTo({top: ref.current.offsetTop - 50});
     }
   }, [currentPage, maxPage]);
