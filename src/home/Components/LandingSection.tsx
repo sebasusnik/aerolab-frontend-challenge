@@ -48,7 +48,7 @@ const LandingSection: React.FC = () => {
           <Image
             src={heroImage}
             layout="fill"
-            objectFit="scale-down"
+            objectFit="contain"
             quality={100}
             alt="Futuristic guy playing with a VR"
             className="noselect"
