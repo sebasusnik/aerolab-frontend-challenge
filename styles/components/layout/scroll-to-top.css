@@ -2,7 +2,7 @@
   position: sticky;
   margin-left: auto;
   bottom: 3em;
-  right: 1.25em;
+  margin-right: 1.25em;
   height: 0;
   width: 4em;
   transition: opacity 0.3s;
