@@ -6,7 +6,7 @@ This is my [Aerolab Frontend Developer coding challenge](https://github.com/Aero
 
 To get started, clone the repository and install the dependencies:
 
-```bash
+```console
 git clone https://github.com/sebasusnik/aerolab-frontend-challenge.git
 cd aerolab-frontend-challenge
 npm install
@@ -14,7 +14,7 @@ npm install
 
 Then, you can start the development server with:
 
-```bash
+```console
 npm run dev
 ```
 
