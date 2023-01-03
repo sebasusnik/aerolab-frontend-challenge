@@ -1,4 +1,4 @@
-# Frontend Challenge
+# Aerolab Frontend coding Challenge
 
 This is my [Aerolab Frontend Developer coding challenge](https://github.com/Aerolab/frontend-developer-coding-challenge) resolution built with [Next.js](https://nextjs.org/). You can view a live demo of the app [here](https://aerolab-frontend-challenge-sebasusnik.vercel.app/).
 
@@ -6,7 +6,7 @@ This is my [Aerolab Frontend Developer coding challenge](https://github.com/Aero
 
 To get started, clone the repository and install the dependencies:
 
-```console
+```bash
 git clone https://github.com/sebasusnik/aerolab-frontend-challenge.git
 cd aerolab-frontend-challenge
 npm install
@@ -14,7 +14,7 @@ npm install
 
 Then, you can start the development server with:
 
-```console
+```bash
 npm run dev
 ```
 
