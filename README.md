@@ -4,7 +4,7 @@ This project is my resolution to the [Aerolab Frontend Developer coding challeng
 
 <br/>
 
-## 👨‍💻 Getting Started
+## Getting Started 👨‍💻
 
 To get started, clone the repository and install the dependencies:
 
@@ -28,13 +28,13 @@ The app will be available at http://localhost:3000.
 
 <br/>
 
-## 🚀 Deployment
+## Deployment 🚀
 
 To deploy the app, you can use the built-in Next.js support for [Vercel](https://vercel.com/). Simply connect your GitHub repository and deploy the branch of your choice.
 
 <br/>
 
-## 🧱 Technologies Used
+## Technologies Used 🧱
 
 - [Next.js](https://nextjs.org/)
 - [React](https://reactjs.org/)
@@ -42,6 +42,6 @@ To deploy the app, you can use the built-in Next.js support for [Vercel](https:/
 
 <br/>
 
-## 📜 License
+## License 📜
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
