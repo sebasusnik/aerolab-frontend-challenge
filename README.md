@@ -1,6 +1,4 @@
-# Aerolab Frontend Coding Challenge Solution
-
-<br/>
+# Aerolab Frontend Coding Challenge Solution 💻
 
 This project is my resolution to the [Aerolab Frontend Developer coding challenge](https://github.com/Aerolab/frontend-developer-coding-challenge) built with [Next.js](https://nextjs.org/). You can see a demo of the app in action [here](https://aerolab-frontend-challenge-sebasusnik.vercel.app/).
 
