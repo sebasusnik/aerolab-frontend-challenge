@@ -1,7 +1,7 @@
 import {Product} from './types';
 
 export default {
-  list: (): Promise<Product[]> =>
+  list: async (): Promise<Product[]> =>
     new Promise(resolve =>
       setTimeout(
         () =>
@@ -330,6 +330,6 @@ export default {
         1000,
       ),
     ),
-  redeem: (product: Product): Promise<string> =>
+  redeem: async (product: Product): Promise<string> =>
     Promise.resolve(`You haver redeem the product sucessfully (${product.name})`),
 };
