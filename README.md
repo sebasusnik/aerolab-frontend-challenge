@@ -45,3 +45,7 @@ To deploy the app, you can use the built-in Next.js support for [Vercel](https:/
 ## License 📜
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Made by [Sebastián Sušnik](https://susnik.dev).
